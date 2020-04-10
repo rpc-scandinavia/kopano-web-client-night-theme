@@ -65,8 +65,10 @@ cd  "~/kopano-web-client-night-theme/night-builder-app"
 dotnet  publish  /p:PublishSingleFile=true  /p:DebugType=None  --self-contained true  --configuration release  --runtime "linux-x64"  --output "../"
 ```
 
-TIP: You can change the default "SETUP_NIGHT_THEMES_DIRECTORY" and "SETUP_NIGHT_ICONS_DIRECTORY" variables in "night-builder - Program.cs".
-TIP: You only need to make changes in "night-builder - Themes.cs", when changing existing theme colours.
+### Tips
+
+* You can change the default "SETUP_NIGHT_ICONS_DIRECTORY" and "SETUP_NIGHT_THEMES_DIRECTORY" variables in "night-builder - Program.cs".
+* You only need to make changes in "night-builder - Themes.cs", when changing existing theme colours.
 
 
 # Development log
