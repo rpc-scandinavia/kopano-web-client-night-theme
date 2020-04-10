@@ -256,7 +256,12 @@ Main panel
 }
 
 /* Main panel, bottom status slider ("7 items loaded" etc.) */
+.zarafa-notifier-eventdropdown-item,
+.zarafa-notifier-popup-item,
+.zarafa-notifier-dropdown-item,
+.ext-el-mask,
 #zarafa-mainpanel .k-slider {
+	border-color: #0d261a;
 	background-color: #0d261a;
 	color: #f0f0f0;
 }
@@ -298,19 +303,6 @@ Main panel, tabs
 	color: #f0f0f0;
 }
 
-/* Main panel, selected tab */
-#zarafa-mainpanel .x-tab-strip-active .x-tab-right {
-	background-color: #0d261a !important;
-}
-#zarafa-mainpanel .x-tab-strip-active {
-	border-left-color: #06130d !important;
-	border-top-color: #06130d !important;
-	border-right-color: #06130d !important;
-}
-#zarafa-mainpanel .x-tab-strip-active .x-tab-strip-text {
-	color: #f0f0f0;
-}
-
 /* Main panel, hovered tab */
 #zarafa-mainpanel .x-tab-strip-over .x-tab-right {
 	background-color: #133926 !important;
@@ -321,6 +313,19 @@ Main panel, tabs
 	border-right-color: #06130d !important;
 }
 #zarafa-mainpanel .x-tab-strip-over .x-tab-strip-text {
+	color: #f0f0f0;
+}
+
+/* Main panel, selected tab */
+#zarafa-mainpanel .x-tab-strip-active .x-tab-right {
+	background-color: #0d261a !important;
+}
+#zarafa-mainpanel .x-tab-strip-active {
+	border-left-color: #06130d !important;
+	border-top-color: #06130d !important;
+	border-right-color: #06130d !important;
+}
+#zarafa-mainpanel .x-tab-strip-active .x-tab-strip-text {
 	color: #f0f0f0;
 }
 
@@ -1188,7 +1193,6 @@ NOTE that with the dropdown menu, the selected ".x-menu-item-selected" class is 
 same element as the ".x-menu-item-active" class. Because of this, the colours are set on the "a" elements, to awoid
 different lengths of the covered background colour.
 ----------------------------------------------------------------------------------------------------------------------*/
-/**/
 .x-window .x-window-footer .x-toolbar-left-row .x-toolbar-cell:not(.x-hide-offsets) .x-btn.x-btn-focus.x-btn-over.x-btn-click .x-btn-small,
 .x-window .x-window-footer .x-toolbar-left-row .x-toolbar-cell:not(.x-hide-offsets) .x-btn:not(.zarafa-normal) .x-btn-small,
 .x-window .x-window-footer .x-toolbar-left-row .x-toolbar-cell:not(.x-hide-offsets) .x-btn:not(.zarafa-normal) .x-btn-small:hover,
@@ -1255,6 +1259,7 @@ different lengths of the covered background colour.
 .x-window .k-recipient-hover-card-button .x-btn-small,															/* Button in mail address popup */
 .x-window .x-panel-footer .x-toolbar-right-row .x-toolbar-cell:not(.x-hide-offsets) ~ .x-toolbar-cell:not(.x-hide-offsets) .x-btn:not(.zarafa-action):not(.k-recipient-hover-card-button) .x-btn-small,
 .x-btn .x-btn-small button,																						/* Button */
+.x-btn .x-btn-noicon,																							/* Button */
 .x-btn .x-btn-large,																							/* Button */
 .x-btn .x-btn-medium,																							/* Button */
 .x-btn .x-btn-small {																							/* Button */
@@ -1273,6 +1278,7 @@ different lengths of the covered background colour.
 .x-btn.zarafa-action .x-btn-small,																				/* Action button */
 .x-window .k-recipient-hover-card-button .x-btn-small,															/* Button in mail address popup */
 .x-btn .x-btn-small button,																						/* Button */
+.x-btn .x-btn-noicon,																							/* Button */
 .x-btn .x-btn-large,																							/* Button */
 .x-btn .x-btn-medium,																							/* Button */
 .x-btn .x-btn-small {																							/* Button */
@@ -1295,6 +1301,7 @@ different lengths of the covered background colour.
 .x-btn.zarafa-action .x-btn-medium .x-btn-text,																	/* Action button */
 .x-btn.zarafa-action .x-btn-small .x-btn-text,																	/* Action button */
 .x-window .k-recipient-hover-card-button .x-btn-small,															/* Button in mail address popup */
+.x-btn .x-btn-noicon .x-btn-text,																				/* Button */
 .x-btn .x-btn-large .x-btn-text,																				/* Button */
 .x-btn .x-btn-medium .x-btn-text,																				/* Button */
 .x-btn .x-btn-small .x-btn-text,																				/* Button */
@@ -1320,6 +1327,7 @@ different lengths of the covered background colour.
 .x-btn.zarafa-action.x-btn-over .x-btn-small,																	/* Action button */
 .x-window .k-recipient-hover-card-button.x-btn.x-btn-over .x-btn-small,											/* Button in mail address popup */
 .x-btn.x-btn-over .x-btn-small button,																			/* Button */
+.x-btn.x-btn-over .x-btn-noicon .x-btn-small button,															/* Button */
 .x-btn.x-btn-over .x-btn-large,																					/* Button */
 .x-btn.x-btn-over .x-btn-medium,																				/* Button */
 .x-btn.x-btn-over .x-btn-small,																					/* Button */
@@ -1344,6 +1352,7 @@ different lengths of the covered background colour.
 .x-btn.zarafa-action.x-btn-over .x-btn-medium .x-btn-text,														/* Action button */
 .x-btn.zarafa-action.x-btn-over .x-btn-small .x-btn-text,														/* Action button */
 .x-window .k-recipient-hover-card-button.x-btn.x-btn-over .x-btn-small,											/* Button in mail address popup */
+.x-btn.x-btn-over .x-btn-noicon .x-btn-text,																	/* Button */
 .x-btn.x-btn-over .x-btn-large .x-btn-text,																		/* Button */
 .x-btn.x-btn-over .x-btn-medium .x-btn-text,																	/* Button */
 .x-btn.x-btn-over .x-btn-small .x-btn-text,																		/* Button */
@@ -1370,6 +1379,7 @@ different lengths of the covered background colour.
 .x-btn.zarafa-action.x-btn-over.x-btn-click .x-btn-large,														/* Action button */
 .x-btn.zarafa-action.x-btn-over.x-btn-click .x-btn-medium,														/* Action button */
 .x-btn.zarafa-action.x-btn-over.x-btn-click .x-btn-small,														/* Action button */
+.x-btn.x-btn-over .x-btn-noicon.x-btn-noicon-click,																/* Button */
 .x-btn.x-btn-over.x-btn-click .x-btn-small button,																/* Button */
 .x-btn.x-btn-over.x-btn-click .x-btn-large,																		/* Button */
 .x-btn.x-btn-over.x-btn-click .x-btn-medium,																	/* Button */
@@ -1397,6 +1407,7 @@ different lengths of the covered background colour.
 .x-btn.zarafa-action.x-btn-over.x-btn-click .x-btn-medium .x-btn-text,											/* Action button */
 .x-btn.zarafa-action.x-btn-over.x-btn-click .x-btn-small .x-btn-text,											/* Action button */
 .x-window .k-recipient-hover-card-button.x-btn.x-btn-over.x-btn-click .x-btn-small,								/* Button in mail address popup */
+.x-btn.x-btn-over .x-btn-noicon.x-btn-noicon-click .x-btn-text,													/* Button */
 .x-btn.x-btn-over.x-btn-click .x-btn-large .x-btn-text,															/* Button */
 .x-btn.x-btn-over.x-btn-click .x-btn-medium .x-btn-text,														/* Button */
 .x-btn.x-btn-over.x-btn-click .x-btn-small .x-btn-text,															/* Button */
@@ -1414,6 +1425,7 @@ different lengths of the covered background colour.
 .x-btn.zarafa-action.x-btn-selected .x-btn-medium,																/* Action button */
 .x-btn.zarafa-action.x-btn-selected .x-btn-small,																/* Action button */
 .x-btn.x-btn-selected .x-btn-small button,																		/* Button */
+.x-btn .x-btn-noicon-selected,																					/* Button */
 .x-btn.x-btn-selected .x-btn-large,																				/* Button */
 .x-btn.x-btn-selected .x-btn-medium,																			/* Button */
 .x-btn.x-btn-selected .x-btn-small,																				/* Button */
@@ -1428,6 +1440,7 @@ different lengths of the covered background colour.
 .x-btn.zarafa-action.x-btn-selected .x-btn-medium .x-btn-text,													/* Action button */
 .x-btn.zarafa-action.x-btn-selected .x-btn-small .x-btn-text,													/* Action button */
 .x-btn.x-btn-selected .x-btn-small button,																		/* Button */
+.x-btn .x-btn-noicon-selected .x-btn-text,																		/* Button */
 .x-btn.x-btn-selected .x-btn-large .x-btn-text,																	/* Button */
 .x-btn.x-btn-selected .x-btn-medium .x-btn-text,																/* Button */
 .x-btn.x-btn-selected .x-btn-small .x-btn-text,																	/* Button */
@@ -1526,11 +1539,14 @@ textarea.x-form-field:focus {
 Panels, dialogs and windows
 ----------------------------------------------------------------------------------------------------------------------*/
 /* Panel border */
+.x-fieldset,
 .x-panel .x-panel-body {
 	border-color: #145214;
 }
 
 /* Panel header */
+.x-grid3-header,
+.x-grid3-hd-row td,
 .x-window .x-window-tl,
 .x-window-header,
 .x-window .x-window-tl .x-window-tr .x-window-tc .x-window-header .x-window-header-text,
@@ -1541,12 +1557,14 @@ Panels, dialogs and windows
 }
 
 /* Panel body */
+.x-grid3,
 .x-window .x-window-bwrap,
 .x-panel-body {
 	background-color: #223300 !important;
 }
 
 /* Panel footer */
+.x-window .x-window-bwrap .x-window-body > div .zarafa-folderproperties.x-panel.tabpanel-container .tab-permissions .userlist-panel,
 .k-recipient-card-view .x-window-footer,
 .x-window-footer,
 .x-panel .x-panel-footer {
@@ -1563,6 +1581,11 @@ Panels, dialogs and windows
 .x-panel-ghost .x-window-tl .x-window-tr .x-window-tc .x-window-header .x-window-header-text {
 	background-color: #3d3d29 !important;
 	color: #f0f0f0 !important;
+}
+
+/* Fix error: Not showing the right side of the border, because the element is too narrow */
+.x-grid3-col .x-grid3-cell .x-grid3-td-color {
+	width: 25px !important;			/* override "23px" */
 }
 
 
@@ -1600,29 +1623,86 @@ Widget panel and widgets
 
 
 /*----------------------------------------------------------------------------------------------------------------------
+Tabs
+----------------------------------------------------------------------------------------------------------------------*/
+/**/
+ul.x-tab-strip li {
+	border-color: transparent !important;
+}
+
+/* Tab panel background colour */
+.x-tab-strip.x-tab-strip-top {
+	background-color: #06130d !important;
+}
+
+/* Tab panel bottom border colour */
+.x-tab-panel-header ul.x-tab-strip-top {
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #06130d;
+}
+
+/* Normal tab */
+.x-tab-strip .x-tab-right {
+	background-color: #0d1a00 !important;
+}
+.x-tab-strip-text {
+	color: #f0f0f0 !important;
+}
+
+/* Hovered tab */
+.x-tab-strip-over .x-tab-right,
+.x-tab-strip-active.x-tab-strip-over .x-tab-right {
+	background-color: #133926 !important;
+}
+.x-tab-strip-over .x-tab-strip-text,
+.x-tab-strip-active.x-tab-strip-over .x-tab-strip-text {
+	color: #f0f0f0 !important;
+}
+
+/* Selected tab */
+.x-tab-strip-active .x-tab-right {
+	background-color: #0d261a !important;
+}
+.x-tab-strip-active .x-tab-strip-text {
+	color: #f0f0f0 !important;
+}
+
+
+
+
+/*----------------------------------------------------------------------------------------------------------------------
 Tree
 Including the navigation panel tree
 ----------------------------------------------------------------------------------------------------------------------*/
 /* Allow colours to be set elsewhere */
+.x-grid3 .x-grid3-row .zarafa-grid-button-container,
+.x-grid3 .x-grid3-row-over .zarafa-grid-button-container,
+.x-grid3 .x-grid3-row-over:active .zarafa-grid-button-container,
+.x-grid3 .x-grid3-row-selected .zarafa-grid-button-container,
 .x-treegrid-text,
 .x-tree-node,
 .x-tree-node a,
 .x-tree-node a span {
-	color: inherit;
+	background-color: inherit !important;
+	color: inherit !important;
 }
 
 /* Normal tree node */
+.x-grid3 .x-grid3-row,
 .x-tree-node .x-tree-node-collapsed,
 .x-tree-node .x-tree-node-expanded,
 .x-tree-node .x-tree-node-leaf {
 	background-color: #0d1a00 !important;
 	color: #f0f0f0 !important;
 }
+.x-grid3 .x-grid3-row,
 .x-treegrid-col {
 	border-color: #0d1a00 !important;
 }
 
 /* Hovered teee node */
+.x-grid3 .x-grid3-row-over,
 .x-tree-node .x-tree-node-collapsed.x-tree-node-over,
 .x-tree-node .x-tree-node-expanded.x-tree-node-over,
 .x-tree-node .x-tree-node-leaf.x-tree-node-over,
@@ -1634,6 +1714,7 @@ Including the navigation panel tree
 }
 
 /* Clicked teee node */
+.x-grid3 .x-grid3-row-over:active,
 .x-tree-node:active .x-tree-node-collapsed.x-tree-node-over,
 .x-tree-node:active .x-tree-node-expanded.x-tree-node-over,
 .x-tree-node:active .x-tree-node-leaf.x-tree-node-over {
@@ -1642,6 +1723,7 @@ Including the navigation panel tree
 }
 
 /* Selected teee node */
+.x-grid3 .x-grid3-row-selected,
 .x-tree-node .x-tree-node-collapsed.x-tree-selected,
 .x-tree-node .x-tree-node-expanded.x-tree-selected,
 .x-tree-node .x-tree-node-leaf.x-tree-selected {
