@@ -4,6 +4,15 @@ The build in "dark" theme, is actually a light theme with black text.
 I started creating my own dark theme, but since the name "dark" is already used wrongfully, I named this theme "night".
 
 
+## Todo
+
+* Identify multicolour icon images
+* Make the next level (as I call it), which is the "windows" and the "dialogs" in the Kopano Web application
+* Tinker with the theme colours
+* New night themes (yellow, red etc.)
+* Bug fixes
+
+
 ## Installation
 
 1) Download and extract the ZIP file
@@ -17,7 +26,7 @@ chown  www-data:www-data  --recursive  "/usr/share/kopano-webapp/plugins"
 ```
 
 ## Development
-In my case, I have access to the same disk from both the Kopano mail server and my workstation. So I use sumbolic links on the Kopano web server, to awoid copying the modified all the time.
+In my case, I have access to the same disk from both the Kopano mail server and my workstation. So I use sumbolic links on the Kopano web server, to awoid copying the modified files all the time.
 
 1) Download and extract the ZIP file
 2) Modifi "SETUP_NIGHT_THEMES_DIRECTORY" and the "SETUP_NIGHT_ICONS_DIRECTORY" in the "night-links.sh" script
