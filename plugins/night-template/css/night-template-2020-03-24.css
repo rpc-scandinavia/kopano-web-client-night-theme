@@ -1,0 +1,1450 @@
+/*
+┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+│    FILE: /usr/share/kopano-webapp/plugins/night/css/themenight.css                                                   │
+│ VERSION: 2020-03-22 Initial version                                                                                  │
+│  SYSTEM: Kopano web application                                                                                      │
+│FUNCTION: CSS code for the "night" Kopano web application dark theme.                                                 │
+│                                                                                                                      │
+│          The following colours are used, and can be searched and replaced:                                           │
+│                                                                                                                      │
+│                                                                                                                      │
+│          Things I could not change:                                                                                  │
+│          * Colour of menubar bell icon, menubar cogwheel icon, menubar selected triangle icon.                       │
+│          * Colour of down-arrow in toolbar split buttons.                                                            │
+│          * Only show the resize-lines.                                                                               │
+│                                                                                                                      │
+│                                                                                                                      │
+└──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+*/
+
+.dummy {
+	background-color: #7f7f7f;
+	background-color: #506a7c;			/* Default selected background colour */
+	background-color: #506a70;
+	background-color: #506a72;
+	background-color: #78acd1;
+	background-color: #2587cb;			/* Default hover background colour */
+	background-color: #084e80;
+	background-color: #364468;			/* Default button background colour */
+	background-color: #21384e;			/* Focussed text input */
+	background-color: #282c37;			/* Default list and content background colour */
+	background-color: #1c2d3d;			/* Top menubar background colour */
+	background-color: #102131;			/* Page background colour */
+	background-color: #2f2f2f;			/* mask background colour */
+
+	color: #222222;
+	color: white;
+}
+
+/* Default background colour */
+.zarafa-webclient {
+	background-color: #102131 !important;
+}
+
+/* Mask background, when showing dialogs */
+.ext-el-mask {
+	background-color: #2f2f2f;
+}
+
+/*----------------------------------------------------------------------------------------------------------------------
+Top menubar
+----------------------------------------------------------------------------------------------------------------------*/
+/* Top menubar */
+body #zarafa-mainmenu,
+body #zarafa-mainmenu.zarafa-maintabbar > .x-toolbar-ct {
+	border-color: #1c2d3d !important;
+	background-color: #1c2d3d !important;
+	color: white;
+}
+
+/* Top menubar button */
+body #zarafa-mainmenu.zarafa-maintabbar > .x-toolbar-ct .x-btn .x-btn-small,
+body #zarafa-mainmenu.zarafa-maintabbar .x-btn .x-btn-small .x-btn-text {
+	background-color: #1c2d3d !important;
+}
+body #zarafa-mainmenu.zarafa-maintabbar > .x-toolbar-ct {
+	color: white;
+}
+
+/* Top menubar hovered button */
+body #zarafa-mainmenu.zarafa-maintabbar .x-btn.x-btn-over .x-btn-small .x-btn-text,
+body #zarafa-mainmenu.zarafa-maintabbar .x-btn.x-btn-over.zarafa-maintabbar-maintab-active .x-btn-small .x-btn-text {
+	background-color: #2587cb !important;
+	color: white !important;
+}
+
+/* Top menubar clicked button */
+body #zarafa-mainmenu.zarafa-maintabbar .x-btn.x-btn-over.x-btn-click .x-btn-small .x-btn-text {
+	background-color: #2587cb !important;
+	color: white !important;
+}
+
+/* Top menubar selected button */
+body #zarafa-mainmenu.zarafa-maintabbar > .x-toolbar-ct .zarafa-maintabbar-maintab-active,
+body #zarafa-mainmenu.zarafa-maintabbar .x-btn.zarafa-maintabbar-maintab-active .x-btn-small .x-btn-text {
+    background-color: #506a7c !important;
+	color: white !important;
+}
+
+/*----------------------------------------------------------------------------------------------------------------------
+Toolbar buttons (not including dropdown menu on split buttons)
+----------------------------------------------------------------------------------------------------------------------*/
+/* Toolbar background colour */
+#zarafa-maintoolbar.x-toolbar {
+	background-color: #102131 !important;
+}
+
+/* Toolbar button splitter-line colour */
+#zarafa-maintoolbar .x-btn em.x-btn-split button {
+	border-right-color: #506a7c;
+}
+/* Toolbar button splitter-line colour */
+#zarafa-maintoolbar .x-btn.zarafa-action em.x-btn-split button {
+	border-right-color: white;
+}
+
+/* Default button text colour */
+#zarafa-maintoolbar .x-btn .x-btn-small button.x-btn-text,
+#zarafa-maintoolbar .x-btn .x-btn-medium button.x-btn-text,
+#zarafa-maintoolbar .x-btn .x-btn-large button.x-btn-text {
+	color: white !important;
+}
+
+/* Toolbar button background colour */
+#zarafa-maintoolbar .x-btn .x-btn-small,
+#zarafa-maintoolbar .x-btn .x-btn-medium,
+#zarafa-maintoolbar .x-btn .x-btn-large,
+#zarafa-maintoolbar .x-btn .x-btn-small button,
+#zarafa-maintoolbar .x-btn .x-btn-medium button,
+#zarafa-maintoolbar .x-btn .x-btn-large button {
+	background-color: #364468 !important;
+}
+
+/* Toolbar button hover background colour */
+#zarafa-maintoolbar .x-btn.x-btn-over .x-btn-small,
+#zarafa-maintoolbar .x-btn.x-btn-over .x-btn-medium,
+#zarafa-maintoolbar .x-btn.x-btn-over .x-btn-large,
+#zarafa-maintoolbar .x-btn.x-btn-over .x-btn-small button,
+#zarafa-maintoolbar .x-btn.x-btn-over .x-btn-medium button,
+#zarafa-maintoolbar .x-btn.x-btn-over .x-btn-large button {
+    background-color: #2587cb !important;
+}
+
+/* Toolbar button clicked background colour */
+#zarafa-maintoolbar .x-btn.x-btn-click .x-btn-small
+#zarafa-maintoolbar .x-btn.x-btn-click .x-btn-medium,
+#zarafa-maintoolbar .x-btn.x-btn-click .x-btn-large,
+#zarafa-maintoolbar .x-btn.x-btn-click .x-btn-small button
+#zarafa-maintoolbar .x-btn.x-btn-click .x-btn-medium button,
+#zarafa-maintoolbar .x-btn.x-btn-click .x-btn-large button {
+    background-color: #2587cb !important;
+}
+
+/* Toolbar button clicked background colour */
+#zarafa-maintoolbar .x-btn.x-btn-over.x-btn-click .x-btn-small,
+#zarafa-maintoolbar .x-btn.x-btn-over.x-btn-click .x-btn-medium,
+#zarafa-maintoolbar .x-btn.x-btn-over.x-btn-click .x-btn-large,
+#zarafa-maintoolbar .x-btn.x-btn-over.x-btn-click .x-btn-small button,
+#zarafa-maintoolbar .x-btn.x-btn-over.x-btn-click .x-btn-medium button,
+#zarafa-maintoolbar .x-btn.x-btn-over.x-btn-click .x-btn-large button {
+    background-color: #2587cb !important;
+}
+
+/* Toolbar selected button background colour */
+#zarafa-maintoolbar .x-btn.zarafa-action .x-btn-small,
+#zarafa-maintoolbar .x-btn.zarafa-action .x-btn-medium,
+#zarafa-maintoolbar .x-btn.zarafa-action .x-btn-large,
+#zarafa-maintoolbar .x-btn.zarafa-action .x-btn-small button,
+#zarafa-maintoolbar .x-btn.zarafa-action .x-btn-medium button,
+#zarafa-maintoolbar .x-btn.zarafa-action .x-btn-large button {
+    background-color: #506a7c !important;
+}
+
+/* Toolbar selected button hover background colour */
+#zarafa-maintoolbar .x-btn.zarafa-action.x-btn-over .x-btn-small,
+#zarafa-maintoolbar .x-btn.zarafa-action.x-btn-over .x-btn-medium,
+#zarafa-maintoolbar .x-btn.zarafa-action.x-btn-over .x-btn-large,
+#zarafa-maintoolbar .x-btn.zarafa-action.x-btn-over .x-btn-small button,
+#zarafa-maintoolbar .x-btn.zarafa-action.x-btn-over .x-btn-medium button,
+#zarafa-maintoolbar .x-btn.zarafa-action.x-btn-over .x-btn-large button {
+    background-color: #2587cb !important;
+}
+
+/* Toolbar selected button clicked background colour */
+#zarafa-maintoolbar .x-btn.zarafa-action.x-btn-over.x-btn-click .x-btn-small,
+#zarafa-maintoolbar .x-btn.zarafa-action.x-btn-over.x-btn-click .x-btn-medium,
+#zarafa-maintoolbar .x-btn.zarafa-action.x-btn-over.x-btn-click .x-btn-large,
+#zarafa-maintoolbar .x-btn.zarafa-action.x-btn-over.x-btn-click .x-btn-small button,
+#zarafa-maintoolbar .x-btn.zarafa-action.x-btn-over.x-btn-click .x-btn-medium button,
+#zarafa-maintoolbar .x-btn.zarafa-action.x-btn-over.x-btn-click .x-btn-large button {
+    background-color: #2587cb !important;
+}
+
+/*----------------------------------------------------------------------------------------------------------------------
+Navigation panel buttons (not including dropdown menu on split buttons)
+----------------------------------------------------------------------------------------------------------------------*/
+/* Toolbar button splitter-line colour */
+#zarafa-navigationpanel .x-btn em.x-btn-split button {
+	border-right-color: #506a7c;
+}
+/* Toolbar button splitter-line colour */
+#zarafa-navigationpanel .x-btn.zarafa-action em.x-btn-split button {
+	border-right-color: white;
+}
+
+/* Default button text colour */
+#zarafa-navigationpanel .x-btn .x-btn-small button.x-btn-text,
+#zarafa-navigationpanel .x-btn .x-btn-medium button.x-btn-text,
+#zarafa-navigationpanel .x-btn .x-btn-large button.x-btn-text {
+	color: white !important;
+}
+
+/* Toolbar button background colour */
+#zarafa-navigationpanel .x-btn .x-btn-small,
+#zarafa-navigationpanel .x-btn .x-btn-medium,
+#zarafa-navigationpanel .x-btn .x-btn-large,
+#zarafa-navigationpanel .x-btn .x-btn-small button,
+#zarafa-navigationpanel .x-btn .x-btn-medium button,
+#zarafa-navigationpanel .x-btn .x-btn-large button {
+	background-color: #364468;
+}
+
+/* Toolbar button hover background colour */
+#zarafa-navigationpanel .x-btn.x-btn-over .x-btn-small,
+#zarafa-navigationpanel .x-btn.x-btn-over .x-btn-medium,
+#zarafa-navigationpanel .x-btn.x-btn-over .x-btn-large,
+#zarafa-navigationpanel .x-btn.x-btn-over .x-btn-small button,
+#zarafa-navigationpanel .x-btn.x-btn-over .x-btn-medium button,
+#zarafa-navigationpanel .x-btn.x-btn-over .x-btn-large button {
+    background-color: #2587cb !important;
+}
+
+/* Toolbar button clicked background colour */
+#zarafa-navigationpanel .x-btn.x-btn-click .x-btn-small
+#zarafa-navigationpanel .x-btn.x-btn-click .x-btn-medium,
+#zarafa-navigationpanel .x-btn.x-btn-click .x-btn-large,
+#zarafa-navigationpanel .x-btn.x-btn-click .x-btn-small button
+#zarafa-navigationpanel .x-btn.x-btn-click .x-btn-medium button,
+#zarafa-navigationpanel .x-btn.x-btn-click .x-btn-large button {
+    background-color: #2587cb !important;
+}
+
+/* Toolbar button clicked background colour */
+#zarafa-navigationpanel .x-btn.x-btn-over.x-btn-click .x-btn-small,
+#zarafa-navigationpanel .x-btn.x-btn-over.x-btn-click .x-btn-medium,
+#zarafa-navigationpanel .x-btn.x-btn-over.x-btn-click .x-btn-large,
+#zarafa-navigationpanel .x-btn.x-btn-over.x-btn-click .x-btn-small button,
+#zarafa-navigationpanel .x-btn.x-btn-over.x-btn-click .x-btn-medium button,
+#zarafa-navigationpanel .x-btn.x-btn-over.x-btn-click .x-btn-large button {
+    background-color: #2587cb !important;
+}
+
+/* Toolbar selected button background colour */
+#zarafa-navigationpanel .x-btn.zarafa-action .x-btn-small,
+#zarafa-navigationpanel .x-btn.zarafa-action .x-btn-medium,
+#zarafa-navigationpanel .x-btn.zarafa-action .x-btn-large,
+#zarafa-navigationpanel .x-btn.zarafa-action .x-btn-small button,
+#zarafa-navigationpanel .x-btn.zarafa-action .x-btn-medium button,
+#zarafa-navigationpanel .x-btn.zarafa-action .x-btn-large button {
+    background-color: #506a7c !important;
+}
+
+/* Toolbar selected button hover background colour */
+#zarafa-navigationpanel .x-btn.zarafa-action.x-btn-over .x-btn-small,
+#zarafa-navigationpanel .x-btn.zarafa-action.x-btn-over .x-btn-medium,
+#zarafa-navigationpanel .x-btn.zarafa-action.x-btn-over .x-btn-large,
+#zarafa-navigationpanel .x-btn.zarafa-action.x-btn-over .x-btn-small button,
+#zarafa-navigationpanel .x-btn.zarafa-action.x-btn-over .x-btn-medium button,
+#zarafa-navigationpanel .x-btn.zarafa-action.x-btn-over .x-btn-large button {
+    background-color: #2587cb !important;
+}
+
+/* Toolbar selected button clicked background colour */
+#zarafa-navigationpanel .x-btn.zarafa-action.x-btn-over.x-btn-click .x-btn-small,
+#zarafa-navigationpanel .x-btn.zarafa-action.x-btn-over.x-btn-click .x-btn-medium,
+#zarafa-navigationpanel .x-btn.zarafa-action.x-btn-over.x-btn-click .x-btn-large,
+#zarafa-navigationpanel .x-btn.zarafa-action.x-btn-over.x-btn-click .x-btn-small button,
+#zarafa-navigationpanel .x-btn.zarafa-action.x-btn-over.x-btn-click .x-btn-medium button,
+#zarafa-navigationpanel .x-btn.zarafa-action.x-btn-over.x-btn-click .x-btn-large button {
+    background-color: #2587cb !important;
+}
+
+/*----------------------------------------------------------------------------------------------------------------------
+Dropdown menus
+----------------------------------------------------------------------------------------------------------------------*/
+/* Dropdown menu border colour and background colour */
+.x-menu.x-menu-floating {
+	border-color: #084e80;
+	background-color: #1c2d3d;
+}
+
+/* Dropdown menu separator colour (note the background colour is used) */
+.x-menu .x-menu-list li.x-menu-sep-li .x-menu-sep {
+	background-color: #084e80;
+}
+
+/* Dropdown menu text colour */
+a.x-menu-item {
+	color: white;
+}
+
+/* Dropdown menu hover background colour */
+.x-menu .x-menu-list li.x-menu-list-item.x-menu-item-active a {
+	background-color: #2587cb !important;
+}
+
+/* Dropdown menu hover text colour */
+.x-menu .x-menu-list li.x-menu-list-item.x-menu-item-active a {
+	color: white;
+}
+
+/* Dropdown menu clicked background colour */
+.x-menu .x-menu-list li.x-menu-list-item.x-menu-item-active:active,
+.x-menu .x-menu-list li.x-menu-list-item.x-menu-item-active:active a:active {
+	background-color: #2587cb !important;
+}
+
+/* Dropdown menu clicked text colour */
+.x-menu .x-menu-list li.x-menu-list-item.x-menu-item-active:active,
+.x-menu .x-menu-list li.x-menu-list-item.x-menu-item-active:active a:active {
+	color: white;
+}
+
+/* Dropdown menu selected background colour */
+.x-menu .x-menu-list li.x-menu-list-item .x-menu-item.x-unselectable.x-menu-item-selected {
+	border-bottom-color: #506a7c !important;
+	background-color: #506a7c !important;
+}
+
+/* Dropdown menu hover selected background colour */
+.x-menu .x-menu-list li.x-menu-list-item .x-menu-item.x-unselectable.x-menu-item-selected:hover {
+	border-bottom-color: #2587cb !important;
+	background-color: #2587cb !important;
+}
+
+/* Dropdown menu disabled background colour */
+.x-menu .x-menu-list li.x-menu-list-item.x-item-disabled {
+	background-color: #1c2d3d !important;
+}
+
+/* Dropdown menu disabled text colour */
+.x-menu .x-menu-list li.x-menu-list-item.x-item-disabled {
+	color: grey !important;
+}
+
+/*----------------------------------------------------------------------------------------------------------------------
+Navigation panel (tree list)
+----------------------------------------------------------------------------------------------------------------------*/
+/* Navigation panel header */
+#zarafa-navigationpanel .x-panel-header {
+	background-color: #506a7c !important;
+}
+
+/* This sets the background colour of the entire x-panel, including item list and item preview */
+/* So it is set to the same background colour as the default background colour */
+#zarafa-navigationpanel .x-panel-body {
+	background-color: #102131 !important;
+}
+
+/* Navigation panel title */
+#zarafa-navigationpanel > div {
+	border-color: transparent;
+	background-color: #506a7c;
+	color: white;
+}
+
+/* Navigation panel toolbar */
+#zarafa-navigationpanel .zarafa-hierarchy-treepanel .zarafa-hierarchy-treepanel-tbar .x-toolbar {
+	background-color: #282c37;
+	color: white;
+}
+
+/* Navigation panel tree background colour */
+#zarafa-navigationpanel .zarafa-hierarchy-treepanel {
+	background-color: #282c37;
+}
+#zarafa-navigationpanel .x-tree-node a span:not(.zarafa-hierarchy-node-counter) {
+	color: white !important;
+}
+#zarafa-navigationpanel .zarafa-hierarchy-node-counter {
+	color: gold !important;
+}
+
+/* Navigation panel line between tree and toolbar/bottombar */
+#zarafa-navigationpanel .zarafa-hierarchy-treepanel .zarafa-hierarchy-treepanel-tbar .x-toolbar,
+#zarafa-navigationpanel .zarafa-hierarchy-treepanel-bottombar {
+	border-color: #084e80 !important;
+}
+
+/* Navigation panel collapsed tree node */
+#zarafa-navigationpanel .x-tree-node .zarafa-hierarchy-node.x-tree-node-collapsed {
+	border-color: #282c37 !important;
+	background-color: #282c37 !important;
+}
+
+/* Navigation panel hover collapsed tree node */
+#zarafa-navigationpanel .x-tree-node .zarafa-hierarchy-node.x-tree-node-collapsed.x-tree-node-over {
+	border-color: #2587cb !important;
+	background-color: #2587cb !important;
+}
+
+/* Navigation panel expanded tree node */
+#zarafa-navigationpanel .x-tree-node .zarafa-hierarchy-node.x-tree-node-expanded {
+	border-color: #282c37 !important;
+	background-color: #282c37 !important;
+}
+
+/* Navigation panel hover expanded tree node */
+#zarafa-navigationpanel .x-tree-node .zarafa-hierarchy-node.x-tree-node-expanded.x-tree-node-over {
+	border-color: #2587cb !important;
+	background-color: #2587cb !important;
+}
+
+/* Navigation panel leaf tree node */
+#zarafa-navigationpanel .x-tree-node .zarafa-hierarchy-node.x-tree-node-leaf {
+	border-color: #282c37 !important;
+	background-color: #282c37 !important;
+}
+
+/* Navigation panel hover leaf tree node */
+#zarafa-navigationpanel .x-tree-node .zarafa-hierarchy-node.x-tree-node-leaf.x-tree-node-over {
+	border-color: #2587cb !important;
+	background-color: #2587cb !important;
+}
+
+/* Navigation panel selected tree node */
+#zarafa-navigationpanel .x-tree-node .zarafa-hierarchy-node.x-tree-selected {
+	border-color: #506a7c !important;
+	background-color: #506a7c !important;
+}
+/* Navigation panel hover selected tree node */
+#zarafa-navigationpanel .x-tree-node .zarafa-hierarchy-node.x-tree-selected.x-tree-node-over {
+	border-color: #2587cb !important;
+	background-color: #2587cb !important;
+}
+
+/*----------------------------------------------------------------------------------------------------------------------
+Main panel (content) tabs
+----------------------------------------------------------------------------------------------------------------------*/
+/* Main panel background colour */
+#zarafa-mainpanel .x-tab-strip.x-tab-strip-top {
+	background-color: #102131 !important;
+}
+
+/* Main panel tab */
+#zarafa-mainpanel .x-tab-strip .x-tab-right {
+	background-color: #364468 !important;
+}
+#zarafa-mainpanel .x-tab-strip li {
+	border-left-color: #364468 !important;
+	border-top-color: #364468 !important;
+	border-right-color: #364468 !important;
+}
+#zarafa-mainpanel .x-tab-strip-text {
+	color: white;
+}
+
+/* Main panel selected tab */
+#zarafa-mainpanel .x-tab-strip-active .x-tab-right {
+	background-color: #506a7c !important;
+}
+#zarafa-mainpanel .x-tab-strip-active {
+	border-left-color: #506a7c !important;
+	border-top-color: #506a7c !important;
+	border-right-color: #506a7c !important;
+}
+
+/* Main panel hover tab */
+#zarafa-mainpanel .x-tab-strip-over .x-tab-right {
+	background-color: #2587cb !important;
+}
+#zarafa-mainpanel .x-tab-strip-over {
+	border-left-color: #2587cb !important;
+	border-top-color: #2587cb !important;
+	border-right-color: #2587cb !important;
+}
+
+/*----------------------------------------------------------------------------------------------------------------------
+Main panel (content) item list
+----------------------------------------------------------------------------------------------------------------------*/
+/* Main panel empty list background colour */
+#zarafa-mainpanel .x-grid3,
+#zarafa-mainpanel .x-grid3-body,
+#zarafa-mainpanel .x-grid3-scroller {
+	background-color: #1c2d3d !important;
+}
+
+/* Main panel empty list text colour */
+#zarafa-mainpanel .emptytext {
+	color: grey;
+}
+
+/* Main panel border around item list and body (preview) */
+#zarafa-mainpanel .x-border-panel {
+	border-color: #282c37 !important;
+}
+
+/* Main panel list group background colour */
+#zarafa-mainpanel .x-grid-group-hd {
+	background-color: #1c2d3d !important;
+}
+
+/* Main panel list group text colour */
+#zarafa-mainpanel .x-grid-group-hd div.x-grid-group-title {
+	color: grey;
+}
+
+/* Main panel list item background colour */
+#zarafa-mainpanel .x-grid3-row {
+	border-color: #282c37;
+	border-top-color: #084e80;
+	border-bottom-color: #084e80;
+	background-color: #282c37 !important;
+}
+
+/* Main panel list item border */
+#zarafa-mainpanel .x-grid3-row table {
+	border-width: 0px !important;
+	border-color: #282c37 !important;
+}
+
+/* Main panel list item first line text colour */
+#zarafa-mainpanel .x-grid3-cell-inner {
+	color: white !important;
+}
+
+/* Main panel list item second line text colour */
+#zarafa-mainpanel .grid_compact_subject_cell {
+	color: white !important;
+}
+
+/* Main panel list selected item background colour */
+#zarafa-mainpanel .x-grid3-row.x-grid3-row-selected {
+	border-color: #506a7c;
+	border-top-color: #084e80;
+	border-bottom-color: #084e80;
+	background-color: #506a7c !important;
+}
+
+/* Main panel list hover item background colour */
+#zarafa-mainpanel .x-grid3-row.x-grid3-row-over {
+	border-color: #2587cb;
+	border-top-color: #084e80;
+	border-bottom-color: #084e80;
+	background-color: #2587cb !important;
+}
+
+
+
+/* Main panel toolbar */
+#zarafa-mainpanel .x-toolbar {
+	background-color: #1c2d3d !important;
+	color: white;
+}
+
+/* Main panel header */
+#zarafa-mainpanel .x-grid3-header {
+	background-color: #1c2d3d !important;
+	color: white !important;
+}
+
+/* Main panel body (preview area) */
+#zarafa-mainpanel .x-panel-body,
+#zarafa-mainpanel .x-panel.preview-header {
+	background-color: #102131 !important;
+	color: white;
+}
+.mce-tinymce iframe,																				/* Mail editor */
+#zarafa-mainpanel .preview-iframe {
+	background-color: grey !important;
+}
+#zarafa-mainpanel .preview-header-extrainfobox,
+#zarafa-mainpanel .preview-header-extrainfobox-item {
+	background-color: #506a7c !important;
+	color: white;
+}
+#zarafa-mainpanel .preview-header-titlebox {
+	color: white;
+}
+#zarafa-mainpanel .preview-from,
+#zarafa-mainpanel .zarafa-sentinfo-link {
+	color: white;
+}
+#zarafa-mainpanel .preview-from:hover,
+#zarafa-mainpanel .zarafa-sentinfo-link:hover {
+	color: gold;
+}
+#zarafa-mainpanel .preview-timestamp-title {
+	color: grey;
+}
+#zarafa-mainpanel .preview-timestamp {
+	color: white;
+}
+#zarafa-mainpanel .preview-recipient-title {
+	color: grey;
+}
+#zarafa-mainpanel .preview-recipient-data,
+#zarafa-mainpanel .zarafa-recipient-link {
+	color: white;
+}
+#zarafa-mainpanel .preview-recipient-data:hover,
+#zarafa-mainpanel .zarafa-recipient-link-over {
+	color: gold;
+}
+#zarafa-mainpanel .preview-attachment-title {
+	color: grey;
+}
+#zarafa-mainpanel .preview-attachment-data {
+	background-color: #102131;
+}
+#zarafa-mainpanel .zarafa-attachment-link {
+	box-shadow: 0 0 0 transparent;
+	border-color: transparent;
+	background-color: #1c2d3d;
+	color: white;
+}
+#zarafa-mainpanel .zarafa-attachment-link:hover,
+#zarafa-mainpanel .zarafa-attachment-link-over {
+	background-color: #1c2d3d;
+	color: gold;
+}
+
+/* Main panel line colour in the toolbar */
+/* This also "hides" the resize lines */
+#zarafa-mainpanel .x-toolbar,
+#zarafa-mainpanel .x-grid3-header,
+#zarafa-mainpanel .x-grid3-cell {
+	border-left-color: transparent !important;
+	border-right-color: transparent !important;
+	border-bottom-color: #084e80 !important;
+}
+
+/* Main panel header normal items */
+#zarafa-mainpanel .x-grid3-hd-row td .x-grid3-hd-inner {
+	border-color: #364468;
+	background-color: #1c2d3d !important;
+	color: white;
+}
+
+/* Main panel header hover items */
+#zarafa-mainpanel .x-grid3-hd-row td .x-grid3-hd-inner:hover {
+	border-color: #2587cb !important;
+	background-color: #1c2d3d !important;
+	color: white;
+}
+
+/* Main panel header item drop-down buttons */
+#zarafa-mainpanel .x-grid3-hd-row td .x-grid3-hd-inner .x-grid3-hd-btn {
+	border-color: #2587cb !important;
+	background-color: #2587cb !important;
+}
+
+
+
+/* Main panel list loaded status slider */
+#zarafa-mainpanel .k-slider {
+	background-color: #506a72;
+	color: white;
+}
+
+
+
+/* Divider between the list of items and the preview item */
+#zarafa-mainpanel .x-panel {
+	background-color: #102131 !important;
+}
+
+
+/*----------------------------------------------------------------------------------------------------------------------
+Main panel search panel
+----------------------------------------------------------------------------------------------------------------------*/
+#zarafa-mainpanel .zarafa-search-toolbox {
+	background-color: #282c37 !important;
+	color: white;
+}
+
+/*----------------------------------------------------------------------------------------------------------------------
+Main panel search panel
+----------------------------------------------------------------------------------------------------------------------*/
+/*
+
+x-btn k-recipient-hover-card-button zarafa-normal x-btn-text-icon
+x-btn k-recipient-hover-card-button zarafa-normal x-btn-text-icon x-btn-over
+
+*/
+
+/* Normal recipient item in address field */
+.x-zarafa-boxfield-recipient-item.x-zarafa-boxfield-item {
+	border-color: #506a7c !important;
+	background-color: #506a7c !important;
+	color: white;
+}
+
+/* Hovered recipient item in address field */
+.x-zarafa-boxfield-recipient-item.x-zarafa-boxfield-item-hover {
+	border-color: #084e80 !important;
+	background-color: #506a7c !important;
+	color: white;
+}
+
+
+
+
+/*----------------------------------------------------------------------------------------------------------------------
+Calendar tabs
+----------------------------------------------------------------------------------------------------------------------*/
+/* Calendar tab panel, background colour */
+#zarafa-mainpanel-contentpanel-calendar .zarafa-calendar-container-tabarea {
+	background-color: #102131 !important;
+}
+
+/* Calendar tab panel, normal calendar indicator (above the calendar tab) */
+#zarafa-mainpanel-contentpanel-calendar .zarafa-calendar-tab,
+#zarafa-mainpanel-contentpanel-calendar .zarafa-calendar-tabarea-stroke {
+	border-top-color: transparent !important;
+	background-color: #102131 !important;
+}
+
+/* Calendar tab panel, selected calendar indicator (above the calendar tab) */
+/* TODO: I do not know why this is set with ".zarafa-calendar-tabarea-stroke-selected" */
+#zarafa-mainpanel-contentpanel-calendar .zarafa-calendar-tab-selected,
+#zarafa-mainpanel-contentpanel-calendar .zarafa-calendar-tabarea-stroke-selected {
+/*#zarafa-mainpanel-contentpanel-calendar .zarafa-calendar.zarafa-calendar-tab-selected {*/
+	border-top-color: transparent !important;
+	background-color: #102131 !important;
+}
+
+
+
+/* Calendar tab panel, normal tab */
+#zarafa-mainpanel-contentpanel-calendar .zarafa-calendar.zarafa-calendar-tab {
+	border-top-color: transparent !important;
+	background-color: #364468 !important;
+	color: white;
+}
+
+/* Calendar tab panel selected tab */
+/* Because the indicator is set with ".zarafa-calendar-tabarea-stroke-selected", the ".zarafa-with-close-icon" class
+   is required here */
+#zarafa-mainpanel-contentpanel-calendar .zarafa-calendar.zarafa-with-close-icon.zarafa-calendar-tab-selected {
+	border-top-color: transparent !important;
+	background-color: #506a7c !important;
+	color: white;
+}
+
+/*----------------------------------------------------------------------------------------------------------------------
+Calendar selector
+----------------------------------------------------------------------------------------------------------------------*/
+
+
+
+/*----------------------------------------------------------------------------------------------------------------------
+Calendar content
+----------------------------------------------------------------------------------------------------------------------*/
+/* Calendar drag selection (selecting an new appointment) */
+.zarafa-calendar-selection-dragging {
+	background-color : #282c37 !important;
+}
+
+/* Calendar day captions */
+.k-day-0.k-week-0, .k-day-1.k-week-0, .k-day-2.k-week-0, .k-day-3.k-week-0, .k-day-4.k-week-0, .k-day-5.k-week-0, .k-day-6.k-week-0,
+.k-day-0.k-week-1, .k-day-1.k-week-1, .k-day-2.k-week-1, .k-day-3.k-week-1, .k-day-4.k-week-1, .k-day-5.k-week-1, .k-day-6.k-week-1,
+.k-day-0.k-week-2, .k-day-1.k-week-2, .k-day-2.k-week-2, .k-day-3.k-week-2, .k-day-4.k-week-2, .k-day-5.k-week-2, .k-day-6.k-week-2,
+.k-day-0.k-week-3, .k-day-1.k-week-3, .k-day-2.k-week-3, .k-day-3.k-week-3, .k-day-4.k-week-3, .k-day-5.k-week-3, .k-day-6.k-week-3,
+.k-day-0.k-week-4, .k-day-1.k-week-4, .k-day-2.k-week-4, .k-day-3.k-week-4, .k-day-4.k-week-4, .k-day-5.k-week-4, .k-day-6.k-week-4,
+.k-day-0.k-week-5, .k-day-1.k-week-5, .k-day-2.k-week-5, .k-day-3.k-week-5, .k-day-4.k-week-5, .k-day-5.k-week-5, .k-day-6.k-week-5 {
+	background-color: #1c2d3d !important;
+}
+.k-header {
+	background-color: #364468 !important;
+}
+
+/* Calendar month view day cells */
+.k-day-0.k-line-0, .k-day-0.k-line-1, .k-day-0.k-line-2, .k-day-0.k-line-3, .k-day-0.k-line-4, .k-day-0.k-line-5,
+.k-day-0.k-line-6, .k-day-0.k-line-7, .k-day-0.k-line-8, .k-day-0.k-line-9, .k-day-0.k-line-10, .k-day-0.k-line-11,
+.k-day-0.k-line-12, .k-day-0.k-line-13, .k-day-0.k-line-14, .k-day-0.k-line-15, .k-day-0.k-line-16, .k-day-0.k-line-17,
+.k-day-0.k-line-18, .k-day-0.k-line-19, .k-day-0.k-line-20, .k-day-0.k-line-21, .k-day-0.k-line-22, .k-day-0.k-line-23,
+.k-day-0.k-line-24, .k-day-0.k-line-25, .k-day-0.k-line-26, .k-day-0.k-line-27, .k-day-0.k-line-28, .k-day-0.k-line-29,
+.k-day-0.k-line-30, .k-day-0.k-line-31, .k-day-0.k-line-32, .k-day-0.k-line-33, .k-day-0.k-line-34, .k-day-0.k-line-35,
+.k-day-0.k-line-36, .k-day-0.k-line-37, .k-day-0.k-line-38, .k-day-0.k-line-39, .k-day-0.k-line-40, .k-day-0.k-line-41,
+.k-day-0.k-line-42, .k-day-0.k-line-43, .k-day-0.k-line-44, .k-day-0.k-line-45, .k-day-0.k-line-46, .k-day-0.k-line-47,
+.k-day-0.k-line-48, .k-day-0.k-line-49, .k-day-0.k-line-50, .k-day-0.k-line-51, .k-day-0.k-line-52, .k-day-0.k-line-53,
+.k-day-0.k-line-54, .k-day-0.k-line-55, .k-day-0.k-line-56, .k-day-0.k-line-57, .k-day-0.k-line-58, .k-day-0.k-line-59,
+
+.k-day-1.k-line-0, .k-day-1.k-line-1, .k-day-1.k-line-2, .k-day-1.k-line-3, .k-day-1.k-line-4, .k-day-1.k-line-5,
+.k-day-1.k-line-6, .k-day-1.k-line-7, .k-day-1.k-line-8, .k-day-1.k-line-9, .k-day-1.k-line-10, .k-day-1.k-line-11,
+.k-day-1.k-line-12, .k-day-1.k-line-13, .k-day-1.k-line-14, .k-day-1.k-line-15, .k-day-1.k-line-16, .k-day-1.k-line-17,
+.k-day-1.k-line-18, .k-day-1.k-line-19, .k-day-1.k-line-20, .k-day-1.k-line-21, .k-day-1.k-line-22, .k-day-1.k-line-23,
+.k-day-1.k-line-24, .k-day-1.k-line-25, .k-day-1.k-line-26, .k-day-1.k-line-27, .k-day-1.k-line-28, .k-day-1.k-line-29,
+.k-day-1.k-line-30, .k-day-1.k-line-31, .k-day-1.k-line-32, .k-day-1.k-line-33, .k-day-1.k-line-34, .k-day-1.k-line-35,
+.k-day-1.k-line-36, .k-day-1.k-line-37, .k-day-1.k-line-38, .k-day-1.k-line-39, .k-day-1.k-line-40, .k-day-1.k-line-41,
+.k-day-1.k-line-42, .k-day-1.k-line-43, .k-day-1.k-line-44, .k-day-1.k-line-45, .k-day-1.k-line-46, .k-day-1.k-line-47,
+.k-day-1.k-line-48, .k-day-1.k-line-49, .k-day-1.k-line-50, .k-day-1.k-line-51, .k-day-1.k-line-52, .k-day-1.k-line-53,
+.k-day-1.k-line-54, .k-day-1.k-line-55, .k-day-1.k-line-56, .k-day-1.k-line-57, .k-day-1.k-line-58, .k-day-1.k-line-59,
+
+.k-day-2.k-line-0, .k-day-2.k-line-1, .k-day-2.k-line-2, .k-day-2.k-line-3, .k-day-2.k-line-4, .k-day-2.k-line-5,
+.k-day-2.k-line-6, .k-day-2.k-line-7, .k-day-2.k-line-8, .k-day-2.k-line-9, .k-day-2.k-line-10, .k-day-2.k-line-11,
+.k-day-2.k-line-12, .k-day-2.k-line-13, .k-day-2.k-line-14, .k-day-2.k-line-15, .k-day-2.k-line-16, .k-day-2.k-line-17,
+.k-day-2.k-line-18, .k-day-2.k-line-19, .k-day-2.k-line-20, .k-day-2.k-line-21, .k-day-2.k-line-22, .k-day-2.k-line-23,
+.k-day-2.k-line-24, .k-day-2.k-line-25, .k-day-2.k-line-26, .k-day-2.k-line-27, .k-day-2.k-line-28, .k-day-2.k-line-29,
+.k-day-2.k-line-30, .k-day-2.k-line-31, .k-day-2.k-line-32, .k-day-2.k-line-33, .k-day-2.k-line-34, .k-day-2.k-line-35,
+.k-day-2.k-line-36, .k-day-2.k-line-37, .k-day-2.k-line-38, .k-day-2.k-line-39, .k-day-2.k-line-40, .k-day-2.k-line-41,
+.k-day-2.k-line-42, .k-day-2.k-line-43, .k-day-2.k-line-44, .k-day-2.k-line-45, .k-day-2.k-line-46, .k-day-2.k-line-47,
+.k-day-2.k-line-48, .k-day-2.k-line-49, .k-day-2.k-line-50, .k-day-2.k-line-51, .k-day-2.k-line-52, .k-day-2.k-line-53,
+.k-day-2.k-line-54, .k-day-2.k-line-55, .k-day-2.k-line-56, .k-day-2.k-line-57, .k-day-2.k-line-58, .k-day-2.k-line-59,
+
+.k-day-3.k-line-0, .k-day-3.k-line-1, .k-day-3.k-line-2, .k-day-3.k-line-3, .k-day-3.k-line-4, .k-day-3.k-line-5,
+.k-day-3.k-line-6, .k-day-3.k-line-7, .k-day-3.k-line-8, .k-day-3.k-line-9, .k-day-3.k-line-10, .k-day-3.k-line-11,
+.k-day-3.k-line-12, .k-day-3.k-line-13, .k-day-3.k-line-14, .k-day-3.k-line-15, .k-day-3.k-line-16, .k-day-3.k-line-17,
+.k-day-3.k-line-18, .k-day-3.k-line-19, .k-day-3.k-line-20, .k-day-3.k-line-21, .k-day-3.k-line-22, .k-day-3.k-line-23,
+.k-day-3.k-line-24, .k-day-3.k-line-25, .k-day-3.k-line-26, .k-day-3.k-line-27, .k-day-3.k-line-28, .k-day-3.k-line-29,
+.k-day-3.k-line-30, .k-day-3.k-line-31, .k-day-3.k-line-32, .k-day-3.k-line-33, .k-day-3.k-line-34, .k-day-3.k-line-35,
+.k-day-3.k-line-36, .k-day-3.k-line-37, .k-day-3.k-line-38, .k-day-3.k-line-39, .k-day-3.k-line-40, .k-day-3.k-line-41,
+.k-day-3.k-line-42, .k-day-3.k-line-43, .k-day-3.k-line-44, .k-day-3.k-line-45, .k-day-3.k-line-46, .k-day-3.k-line-47,
+.k-day-3.k-line-48, .k-day-3.k-line-49, .k-day-3.k-line-50, .k-day-3.k-line-51, .k-day-3.k-line-52, .k-day-3.k-line-53,
+.k-day-3.k-line-54, .k-day-3.k-line-55, .k-day-3.k-line-56, .k-day-3.k-line-57, .k-day-3.k-line-58, .k-day-3.k-line-59,
+
+.k-day-4.k-line-0, .k-day-4.k-line-1, .k-day-4.k-line-2, .k-day-4.k-line-3, .k-day-4.k-line-4, .k-day-4.k-line-5,
+.k-day-4.k-line-6, .k-day-4.k-line-7, .k-day-4.k-line-8, .k-day-4.k-line-9, .k-day-4.k-line-10, .k-day-4.k-line-11,
+.k-day-4.k-line-12, .k-day-4.k-line-13, .k-day-4.k-line-14, .k-day-4.k-line-15, .k-day-4.k-line-16, .k-day-4.k-line-17,
+.k-day-4.k-line-18, .k-day-4.k-line-19, .k-day-4.k-line-20, .k-day-4.k-line-21, .k-day-4.k-line-22, .k-day-4.k-line-23,
+.k-day-4.k-line-24, .k-day-4.k-line-25, .k-day-4.k-line-26, .k-day-4.k-line-27, .k-day-4.k-line-28, .k-day-4.k-line-29,
+.k-day-4.k-line-30, .k-day-4.k-line-31, .k-day-4.k-line-32, .k-day-4.k-line-33, .k-day-4.k-line-34, .k-day-4.k-line-35,
+.k-day-4.k-line-36, .k-day-4.k-line-37, .k-day-4.k-line-38, .k-day-4.k-line-39, .k-day-4.k-line-40, .k-day-4.k-line-41,
+.k-day-4.k-line-42, .k-day-4.k-line-43, .k-day-4.k-line-44, .k-day-4.k-line-45, .k-day-4.k-line-46, .k-day-4.k-line-47,
+.k-day-4.k-line-48, .k-day-4.k-line-49, .k-day-4.k-line-50, .k-day-4.k-line-51, .k-day-4.k-line-52, .k-day-4.k-line-53,
+.k-day-4.k-line-54, .k-day-4.k-line-55, .k-day-4.k-line-56, .k-day-4.k-line-57, .k-day-4.k-line-58, .k-day-4.k-line-59,
+
+.k-day-5.k-line-0, .k-day-5.k-line-1, .k-day-5.k-line-2, .k-day-5.k-line-3, .k-day-5.k-line-4, .k-day-5.k-line-5,
+.k-day-5.k-line-6, .k-day-5.k-line-7, .k-day-5.k-line-8, .k-day-5.k-line-9, .k-day-5.k-line-10, .k-day-5.k-line-11,
+.k-day-5.k-line-12, .k-day-5.k-line-13, .k-day-5.k-line-14, .k-day-5.k-line-15, .k-day-5.k-line-16, .k-day-5.k-line-17,
+.k-day-5.k-line-18, .k-day-5.k-line-19, .k-day-5.k-line-20, .k-day-5.k-line-21, .k-day-5.k-line-22, .k-day-5.k-line-23,
+.k-day-5.k-line-24, .k-day-5.k-line-25, .k-day-5.k-line-26, .k-day-5.k-line-27, .k-day-5.k-line-28, .k-day-5.k-line-29,
+.k-day-5.k-line-30, .k-day-5.k-line-31, .k-day-5.k-line-32, .k-day-5.k-line-33, .k-day-5.k-line-34, .k-day-5.k-line-35,
+.k-day-5.k-line-36, .k-day-5.k-line-37, .k-day-5.k-line-38, .k-day-5.k-line-39, .k-day-5.k-line-40, .k-day-5.k-line-41,
+.k-day-5.k-line-42, .k-day-5.k-line-43, .k-day-5.k-line-44, .k-day-5.k-line-45, .k-day-5.k-line-46, .k-day-5.k-line-47,
+.k-day-5.k-line-48, .k-day-5.k-line-49, .k-day-5.k-line-50, .k-day-5.k-line-51, .k-day-5.k-line-52, .k-day-5.k-line-53,
+.k-day-5.k-line-54, .k-day-5.k-line-55, .k-day-5.k-line-56, .k-day-5.k-line-57, .k-day-5.k-line-58, .k-day-5.k-line-59,
+
+.k-day-6.k-line-0, .k-day-6.k-line-1, .k-day-6.k-line-2, .k-day-6.k-line-3, .k-day-6.k-line-4, .k-day-6.k-line-5,
+.k-day-6.k-line-6, .k-day-6.k-line-7, .k-day-6.k-line-8, .k-day-6.k-line-9, .k-day-6.k-line-10, .k-day-6.k-line-11,
+.k-day-6.k-line-12, .k-day-6.k-line-13, .k-day-6.k-line-14, .k-day-6.k-line-15, .k-day-6.k-line-16, .k-day-6.k-line-17,
+.k-day-6.k-line-18, .k-day-6.k-line-19, .k-day-6.k-line-20, .k-day-6.k-line-21, .k-day-6.k-line-22, .k-day-6.k-line-23,
+.k-day-6.k-line-24, .k-day-6.k-line-25, .k-day-6.k-line-26, .k-day-6.k-line-27, .k-day-6.k-line-28, .k-day-6.k-line-29,
+.k-day-6.k-line-30, .k-day-6.k-line-31, .k-day-6.k-line-32, .k-day-6.k-line-33, .k-day-6.k-line-34, .k-day-6.k-line-35,
+.k-day-6.k-line-36, .k-day-6.k-line-37, .k-day-6.k-line-38, .k-day-6.k-line-39, .k-day-6.k-line-40, .k-day-6.k-line-41,
+.k-day-6.k-line-42, .k-day-6.k-line-43, .k-day-6.k-line-44, .k-day-6.k-line-45, .k-day-6.k-line-46, .k-day-6.k-line-47,
+.k-day-6.k-line-48, .k-day-6.k-line-49, .k-day-6.k-line-50, .k-day-6.k-line-51, .k-day-6.k-line-52, .k-day-6.k-line-53,
+.k-day-6.k-line-54, .k-day-6.k-line-55, .k-day-6.k-line-56, .k-day-6.k-line-57, .k-day-6.k-line-58, .k-day-6.k-line-59 {
+	border-color: #084e80 !important;
+	background-color: #1c2d3d !important;
+}
+
+/* Calendar current day */
+.zarafa-calendar-container-header .k-html-header-background .k-today .k-cal-header-title,					/* 7 view */
+.zarafa-calendar-boxview .zarafa-calendar-container-body .k-html-body-background .k-today .k-header {		/* 31 view */
+	background-color: #506a7c !important;
+}
+.zarafa-calendar-container-header .k-html-header-background .k-active-border,								/* 7 view */
+.zarafa-calendar-boxview .zarafa-calendar-container-body .k-html-body-background .k-action-border {			/* 31 view */
+    border-color: #506a7c !important;
+}
+
+/* Calendar border */
+.zarafa-calendar.zarafa-calendar-border.zarafa-calendar-border-left,
+.zarafa-calendar.zarafa-calendar-border.zarafa-calendar-border-right {
+	border-color: transparent !important;
+}
+
+/* Calendar time */
+.zarafa-calendar-timestrip-element div {
+	color: white;
+}
+
+/* Calendar editor warning */
+.k-appointmentcreatetab .zarafa-calendar-appointment-extrainfo div {
+	background-color: #506a7c !important;
+	color: white;
+}
+
+/*----------------------------------------------------------------------------------------------------------------------
+Contacts
+----------------------------------------------------------------------------------------------------------------------*/
+/* Category in list (contact cagegory) */
+.k-category-block.zarafa-dark {
+	background-color: #95a0a7;
+	color: black;
+}
+
+/* Normal contact card */
+div.zarafa-contact-cardview-card {
+	border-color: transparent;
+	background-color: transparent !important;
+}
+
+/* Hovered contact card */
+div.zarafa-contact-cardview-selected:hover,
+div.zarafa-contact-cardview-card:hover {
+	border-color: #2587cb;
+	background-color: #2587cb !important;
+}
+
+/* Selected contact card */
+div.zarafa-contact-cardview-selected {
+	border-color: #506a7c;
+	background-color: #506a7c !important;
+}
+
+
+/*----------------------------------------------------------------------------------------------------------------------
+Sticky notes
+----------------------------------------------------------------------------------------------------------------------*/
+.zarafa-note-iconview-thumb {
+	background-color: transparent !important;
+	border-color: #364468 !important;
+	color: white;
+}
+
+.zarafa-note-iconview-over {
+	background-color: transparent !important;
+	border-color: #2587cb !important;
+	color: white;
+}
+
+.zarafa-note-iconview-selected {
+	background-color: #506a7c !important;
+	border-color: #506a7c !important;
+	color: white;
+}
+.zarafa-note-iconview-selected:hover {
+	border-color: #2587cb !important;
+}
+
+.x-form-textarea.stickynote_dialog_blue,
+.x-form-textarea.stickynote_dialog_blue:hover,
+.x-form-textarea.stickynote_dialog_blue:focus {
+    background-color: #def1ff80 !important;
+	color: white;
+}
+.x-form-textarea.stickynote_dialog_green,
+.x-form-textarea.stickynote_dialog_green:hover,
+.x-form-textarea.stickynote_dialog_green:focus {
+    background-color: #cbf0bb80 !important;
+	color: white;
+}
+.x-form-textarea.stickynote_dialog_pink,
+.x-form-textarea.stickynote_dialog_pink:hover,
+.x-form-textarea.stickynote_dialog_pink:focus {
+    background-color: #ffdbfb80 !important;
+	color: white;
+}
+.x-form-textarea.stickynote_dialog_yellow,
+.x-form-textarea.stickynote_dialog_yellow:hover,
+.x-form-textarea.stickynote_dialog_yellow:focus {
+    background-color: #ffff9980 !important;
+	color: white;
+}
+.x-form-textarea.stickynote_dialog_white,
+.x-form-textarea.stickynote_dialog_white:hover,
+.x-form-textarea.stickynote_dialog_white:focus {
+    background-color: #ffffff80 !important;
+	color: white;
+}
+
+/*----------------------------------------------------------------------------------------------------------------------
+Dialogs
+----------------------------------------------------------------------------------------------------------------------*/
+/* Popup dialog */
+.x-panel,
+.x-panel-body,
+.x-window
+.x-window-bwrap {
+	border-color: #084e80 !important;
+	background-color: #282c37 !important;
+}
+
+.x-form-display-field {
+	color: white !important;
+}
+
+.x-window-tl,
+.x-window-tc,
+.x-window-tr,
+.x-panel-header {
+	background-color: #1c2d3d !important;
+}
+.x-window-header-text,
+.x-panel-header-text {
+	color: white !important;
+}
+
+.x-window-footer {
+	border-color: #084e80 !important;
+	background-color: #282c37 !important;
+}
+
+/* Mask when moving windows */
+.x-panel-ghost {
+	background-color: #506a72 !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Lines in windows */
+.k-appointmentcreatetab .filler,
+.k-appointmentcreatetab .k-busystatus-panel,
+.k-appointmentcreatetab .k-createin-panel,
+.k-appointmentcreatetab .k-datetime-panel table tr:nth-child(2),
+.k-appointmentcreatetab .k-field-to {
+	border-color: #084e80 !important;
+}
+
+/*----------------------------------------------------------------------------------------------------------------------
+Form controls - Tabs
+Most is handled by the buttons.
+----------------------------------------------------------------------------------------------------------------------*/
+/* Line under the tab buttons */
+ul.x-tab-strip {
+	border-color: #084e80 !important;
+}
+
+/*----------------------------------------------------------------------------------------------------------------------
+Form controls - Text input/area
+----------------------------------------------------------------------------------------------------------------------*/
+/* Normal labels */
+.zarafa-widget-item,
+.x-fieldset legend {
+	color: #506a7c !important;
+}
+
+/* Hovered labels */
+.zarafa-widget-item:hover {
+	color: #2587cb !important;
+}
+
+/* Normal text input/area */
+.x-form-text,
+textarea.x-form-field {
+	border-color: #364468 !important;
+	background-color: #1c2d3d !important;
+	color: white !important;
+}
+
+/* Hovered text input/area */
+.x-form-text:hover,
+textarea.x-form-field:hover {
+	border-color: #2587cb !important;
+	background-color: #1c2d3d !important;
+	color: white !important;
+}
+
+/* Focused text input/area */
+.x-form-text:focus,
+.x-form-text.x-form-focus,
+textarea.x-form-field:focus {
+	background-color: #21384e !important;
+	color: yellow !important;
+}
+
+/*----------------------------------------------------------------------------------------------------------------------
+Form controls - Combo list
+----------------------------------------------------------------------------------------------------------------------*/
+/* Combo list devider */
+.k-search-combobox-menu-sep-parent .k-search-combobox-menu-sep {
+	border-color: #506a7c !important;
+}
+
+/* Combo list border colour and background colour */
+.x-combo-list,
+.x-combo-list-inner {
+	border-color: #364468 !important;
+	background-color: #1c2d3d !important;
+}
+
+/* Normal combo list item */
+.x-combo-list .x-combo-list-item {
+	background-color: #1c2d3d !important;
+	color: white;
+}
+
+/* Hovered combo list item */
+.x-combo-list .x-combo-list-item.x-combo-selected:hover {
+	background-color: #2587cb !important;
+	color: white;
+}
+
+/* Selected combo list item */
+.x-combo-list .x-combo-list-item.x-combo-selected {
+	background-color: #506a7c !important;
+	color: white;
+}
+
+/*----------------------------------------------------------------------------------------------------------------------
+Form controls - Field wrapper buttons
+----------------------------------------------------------------------------------------------------------------------*/
+/* Normal buttons (this is the button part ) */
+.x-btn.zarafa-action .x-btn-small,														/* X buttons */
+.x-btn .x-btn-small,																	/* X buttons */
+.x-date-picker .x-date-middle .x-btn,													/* Date picker top button text */
+.x-date-picker .x-date-middle .x-btn-small em,											/* Date picker top button */
+.x-form-field-wrap .x-form-field-trigger-wrap .x-form-trigger,							/* Combobox */
+.x-form-field-wrap .x-form-trigger,														/* Numeric up/down */
+.x-form-field-wrap .x-form-spinner-trigger {											/* Numeric up/down */
+	border-color: #506a7c !important;
+	background-color: #506a7c !important;
+}
+.x-btn-small button {
+	color: white !important;
+}
+
+/* Normal buttons (this is the data part) (darker) */
+.x-form-field-wrap {																	/* Numeric up/down */
+	border-color: #506a7c !important;
+	background-color: #1c2d3d !important;
+}
+
+/* Normal buttons (this is the data part) (lighter) */
+.x-btn .x-btn-small .x-btn-text {														/* X buttons */
+	border-color: #506a7c !important;
+	background-color: #364468 !important;
+}
+
+/* Hovering wrapper or buttons */
+.x-btn.zarafa-action.x-btn-over .x-btn-small,											/* X buttons */
+.x-btn.x-btn-over .x-btn-small,															/* X buttons */
+.x-btn.x-btn-over .x-btn-small .x-btn-text,												/* X buttons */
+.x-date-picker .x-date-middle .x-btn-small em:hover,									/* Date picker top button */
+.x-form-field-wrap .x-form-field-trigger-wrap .x-box-item:hover,						/* Combobox */
+.x-form-field-wrap .x-form-field-trigger-wrap .x-form-field:hover,						/* Combobox */
+.x-form-field-wrap .x-form-text:hover,													/* Numeric up/down */
+.x-form-field-wrap:hover:not(.x-zarafa-boxfield) .x-form-text,							/* Numeric up/down */
+.x-form-field-wrap:hover:not(.x-zarafa-boxfield) .x-form-trigger,						/* Numeric up/down */
+.x-form-field-wrap:hover:not(.x-zarafa-boxfield) .x-form-spinner-trigger {				/* Numeric up/down */
+/*.x-form-field-wrap:hover {*/
+	border-color: #2587cb !important;
+	background-color: #2587cb !important;
+}
+
+/* Clicking wrapper or buttons */
+.x-btn.zarafa-action.x-btn-over.x-btn-click .x-btn-small,								/* X buttons */
+.x-btn.x-btn-over.x-btn-click .x-btn-small,												/* X buttons */
+.x-btn.x-btn-over.x-btn-click .x-btn-small .x-btn-text {								/* X buttons */
+	border-color: #2587cb !important;
+	background-color: #2587cb !important;
+}
+
+/* Focussed wrapper or buttons */
+.x-btn.zarafa-action.x-btn-menu-active:not(.x-btn-click):not(.x-btn-over) .x-btn-small,	/* X buttons */
+.x-form-field-wrap .x-form-field-trigger-wrap.x-trigger-wrap-focus .x-box-item,			/* Combobox */
+.x-form-field-wrap .x-form-field-trigger-wrap.x-trigger-wrap-focus .x-form-field,		/* Combobox */
+.x-form-field-wrap .x-trigger-wrap-focus {												/* Numeric up/down */
+	border-color: #2587cb !important;
+	background-color: #506a7c !important;
+}
+
+/* Splitter colour */
+.x-btn .x-btn-small .x-btn-split .x-btn-text,											/* X buttons */
+.x-date-picker .x-date-middle .x-btn-small em button,									/* Date picker top button */
+.x-form-field-wrap .x-form-text:not(.x-zarafa-boxfield):not(.x-zarafa-boxfield-input) {	/* Combobox, Numeric up/down etc. */
+	border-right-color: red !important;
+}/* #084e80 */
+
+/* x-btn-split  */
+
+/*----------------------------------------------------------------------------------------------------------------------
+Form controls - Button
+----------------------------------------------------------------------------------------------------------------------*/
+/* Normal button border colour and background colour */
+/*
+.x-window .x-panel-footer .x-toolbar-left-row .x-toolbar-cell:not(.x-hide-offsets) .x-btn:not(.zarafa-normal) .x-btn-small,
+.x-window .x-panel-footer .x-toolbar-left-row .x-toolbar-cell:not(.x-hide-offsets) .x-btn:not(.zarafa-normal) .x-btn-medium,
+.x-window .x-panel-footer .x-toolbar-left-row .x-toolbar-cell:not(.x-hide-offsets) .x-btn:not(.zarafa-normal) .x-btn-large,
+.x-window .x-panel-footer .x-toolbar-right-row .x-toolbar-cell:not(.x-hide-offsets) .x-btn:not(.zarafa-normal) .x-btn-small,
+.x-window .x-panel-footer .x-toolbar-right-row .x-toolbar-cell:not(.x-hide-offsets) .x-btn:not(.zarafa-normal) .x-btn-medium,
+.x-window .x-panel-footer .x-toolbar-right-row .x-toolbar-cell:not(.x-hide-offsets) .x-btn:not(.zarafa-normal) .x-btn-large,
+.x-window .x-window-footer .x-toolbar-left-row .x-toolbar-cell:not(.x-hide-offsets) .x-btn:not(.zarafa-normal) .x-btn-small,
+.x-window .x-window-footer .x-toolbar-left-row .x-toolbar-cell:not(.x-hide-offsets) .x-btn:not(.zarafa-normal) .x-btn-medium,
+.x-window .x-window-footer .x-toolbar-left-row .x-toolbar-cell:not(.x-hide-offsets) .x-btn:not(.zarafa-normal) .x-btn-large,
+.x-window .x-window-footer .x-toolbar-right-row .x-toolbar-cell:not(.x-hide-offsets) .x-btn:not(.zarafa-normal) .x-btn-small,
+.x-window .x-window-footer .x-toolbar-right-row .x-toolbar-cell:not(.x-hide-offsets) .x-btn:not(.zarafa-normal) .x-btn-medium,
+.x-window .x-window-footer .x-toolbar-right-row .x-toolbar-cell:not(.x-hide-offsets) .x-btn:not(.zarafa-normal) .x-btn-large,
+
+.x-window .x-panel-footer .x-toolbar-left-row .x-toolbar-cell:not(.x-hide-offsets) .x-btn:not(.k-window-text-button) .x-btn-small,
+.x-window .x-panel-footer .x-toolbar-left-row .x-toolbar-cell:not(.x-hide-offsets) .x-btn:not(.k-window-text-button) .x-btn-medium,
+.x-window .x-panel-footer .x-toolbar-left-row .x-toolbar-cell:not(.x-hide-offsets) .x-btn:not(.k-window-text-button) .x-btn-large,
+.x-window .x-panel-footer .x-toolbar-right-row .x-toolbar-cell:not(.x-hide-offsets) .x-btn:not(.k-window-text-button) .x-btn-small,
+.x-window .x-panel-footer .x-toolbar-right-row .x-toolbar-cell:not(.x-hide-offsets) .x-btn:not(.k-window-text-button) .x-btn-medium,
+.x-window .x-panel-footer .x-toolbar-right-row .x-toolbar-cell:not(.x-hide-offsets) .x-btn:not(.k-window-text-button) .x-btn-large,
+.x-window .x-window-footer .x-toolbar-left-row .x-toolbar-cell:not(.x-hide-offsets) .x-btn:not(.k-window-text-button) .x-btn-small,
+.x-window .x-window-footer .x-toolbar-left-row .x-toolbar-cell:not(.x-hide-offsets) .x-btn:not(.k-window-text-button) .x-btn-medium,
+.x-window .x-window-footer .x-toolbar-left-row .x-toolbar-cell:not(.x-hide-offsets) .x-btn:not(.k-window-text-button) .x-btn-large,
+.x-window .x-window-footer .x-toolbar-right-row .x-toolbar-cell:not(.x-hide-offsets) .x-btn:not(.k-window-text-button) .x-btn-small,
+.x-window .x-window-footer .x-toolbar-right-row .x-toolbar-cell:not(.x-hide-offsets) .x-btn:not(.k-window-text-button) .x-btn-medium,
+.x-window .x-window-footer .x-toolbar-right-row .x-toolbar-cell:not(.x-hide-offsets) .x-btn:not(.k-window-text-button) .x-btn-large,
+
+.k-reminderpanel .x-panel-footer .x-toolbar-left-row .x-toolbar-cell:not(.x-hide-offsets) .x-btn:not(.k-window-text-button) .x-btn-small,
+.k-reminderpanel .x-panel-footer .x-toolbar-left-row .x-toolbar-cell:not(.x-hide-offsets) .x-btn:not(.k-window-text-button) .x-btn-medium,
+.k-reminderpanel .x-panel-footer .x-toolbar-left-row .x-toolbar-cell:not(.x-hide-offsets) .x-btn:not(.k-window-text-button) .x-btn-large,
+.k-reminderpanel .x-panel-footer .x-toolbar-right-row .x-toolbar-cell:not(.x-hide-offsets) .x-btn:not(.k-window-text-button) .x-btn-small,
+.k-reminderpanel .x-panel-footer .x-toolbar-right-row .x-toolbar-cell:not(.x-hide-offsets) .x-btn:not(.k-window-text-button) .x-btn-medium,
+.k-reminderpanel .x-panel-footer .x-toolbar-right-row .x-toolbar-cell:not(.x-hide-offsets) .x-btn:not(.k-window-text-button) .x-btn-large,
+.k-reminderpanel .x-window-footer .x-toolbar-left-row .x-toolbar-cell:not(.x-hide-offsets) .x-btn:not(.k-window-text-button) .x-btn-small,
+.k-reminderpanel .x-window-footer .x-toolbar-left-row .x-toolbar-cell:not(.x-hide-offsets) .x-btn:not(.k-window-text-button) .x-btn-medium,
+.k-reminderpanel .x-window-footer .x-toolbar-left-row .x-toolbar-cell:not(.x-hide-offsets) .x-btn:not(.k-window-text-button) .x-btn-large,
+.k-reminderpanel .x-window-footer .x-toolbar-right-row .x-toolbar-cell:not(.x-hide-offsets) .x-btn:not(.k-window-text-button) .x-btn-small,
+.k-reminderpanel .x-window-footer .x-toolbar-right-row .x-toolbar-cell:not(.x-hide-offsets) .x-btn:not(.k-window-text-button) .x-btn-medium,
+.k-reminderpanel .x-window-footer .x-toolbar-right-row .x-toolbar-cell:not(.x-hide-offsets) .x-btn:not(.k-window-text-button) .x-btn-large,
+*/
+.x-window .x-panel-footer .x-toolbar-left-row .x-toolbar-cell:not(.x-hide-offsets) .k-recipient-hover-card-button.x-btn .x-btn-small,
+.x-window .x-panel-footer .x-toolbar-left-row .x-toolbar-cell:not(.x-hide-offsets) .k-recipient-hover-card-button.x-btn .x-btn-medium,
+.x-window .x-panel-footer .x-toolbar-left-row .x-toolbar-cell:not(.x-hide-offsets) .k-recipient-hover-card-button.x-btn .x-btn-large,
+.x-window .x-panel-footer .x-toolbar-right-row .x-toolbar-cell:not(.x-hide-offsets) .k-recipient-hover-card-button.x-btn .x-btn-small,
+.x-window .x-panel-footer .x-toolbar-right-row .x-toolbar-cell:not(.x-hide-offsets) .k-recipient-hover-card-button.x-btn .x-btn-medium,
+.x-window .x-panel-footer .x-toolbar-right-row .x-toolbar-cell:not(.x-hide-offsets) .k-recipient-hover-card-button.x-btn .x-btn-large,
+.x-window .x-window-footer .x-toolbar-left-row .x-toolbar-cell:not(.x-hide-offsets) .k-recipient-hover-card-button.x-btn .x-btn-small,
+.x-window .x-window-footer .x-toolbar-left-row .x-toolbar-cell:not(.x-hide-offsets) .k-recipient-hover-card-button.x-btn .x-btn-medium,
+.x-window .x-window-footer .x-toolbar-left-row .x-toolbar-cell:not(.x-hide-offsets) .k-recipient-hover-card-button.x-btn .x-btn-large,
+.x-window .x-window-footer .x-toolbar-right-row .x-toolbar-cell:not(.x-hide-offsets) .k-recipient-hover-card-button.x-btn .x-btn-small,
+.x-window .x-window-footer .x-toolbar-right-row .x-toolbar-cell:not(.x-hide-offsets) .k-recipient-hover-card-button.x-btn .x-btn-medium,
+.x-window .x-window-footer .x-toolbar-right-row .x-toolbar-cell:not(.x-hide-offsets) .k-recipient-hover-card-button.x-btn .x-btn-large,
+
+.k-category-filter .k-category-filter-label .x-btn-small,									/* Search panel button */
+
+.x-btn.zarafa-action .x-btn-medium,
+.x-btn.zarafa-action .x-btn-large,
+/*.x-btn-small,*/
+.x-btn-medium,
+.x-btn-large,
+/*.x-btn-small .k-selection,*/
+.x-btn-medium .k-selection,
+.x-btn-large .k-selection {
+	border-color: #364468 !important;
+	background-color: #1c2d3d !important;
+}
+
+/* Normal button text colour */
+#zarafa-navigationpanel .x-btn .x-btn-small button.x-btn-text,
+.k-category-filter .k-category-filter-label .x-btn-small button,							/* Search panel button */
+/* .x-btn-small button, */
+.x-btn-medium button,
+.x-btn-large button {
+	color: white !important;
+}
+
+/* Hovered button border colour and background colour */
+/*
+.x-window .x-panel-footer .x-toolbar-left-row .x-toolbar-cell:not(.x-hide-offsets) .x-btn.x-btn-over.x-btn-click:not(.zarafa-normal) .x-btn-small,
+.x-window .x-panel-footer .x-toolbar-left-row .x-toolbar-cell:not(.x-hide-offsets) .x-btn.x-btn-over.x-btn-click:not(.zarafa-normal) .x-btn-medium,
+.x-window .x-panel-footer .x-toolbar-left-row .x-toolbar-cell:not(.x-hide-offsets) .x-btn.x-btn-over.x-btn-click:not(.zarafa-normal) .x-btn-large,
+.x-window .x-panel-footer .x-toolbar-right-row .x-toolbar-cell:not(.x-hide-offsets) .x-btn.x-btn-over.x-btn-click:not(.zarafa-normal) .x-btn-small,
+.x-window .x-panel-footer .x-toolbar-right-row .x-toolbar-cell:not(.x-hide-offsets) .x-btn.x-btn-over.x-btn-click:not(.zarafa-normal) .x-btn-medium,
+.x-window .x-panel-footer .x-toolbar-right-row .x-toolbar-cell:not(.x-hide-offsets) .x-btn.x-btn-over.x-btn-click:not(.zarafa-normal) .x-btn-large,
+.x-window .x-window-footer .x-toolbar-left-row .x-toolbar-cell:not(.x-hide-offsets) .x-btn.x-btn-over.x-btn-click:not(.zarafa-normal) .x-btn-small,
+.x-window .x-window-footer .x-toolbar-left-row .x-toolbar-cell:not(.x-hide-offsets) .x-btn.x-btn-over.x-btn-click:not(.zarafa-normal) .x-btn-medium,
+.x-window .x-window-footer .x-toolbar-left-row .x-toolbar-cell:not(.x-hide-offsets) .x-btn.x-btn-over.x-btn-click:not(.zarafa-normal) .x-btn-large,
+.x-window .x-window-footer .x-toolbar-right-row .x-toolbar-cell:not(.x-hide-offsets) .x-btn.x-btn-over.x-btn-click:not(.zarafa-normal) .x-btn-small,
+.x-window .x-window-footer .x-toolbar-right-row .x-toolbar-cell:not(.x-hide-offsets) .x-btn.x-btn-over.x-btn-click:not(.zarafa-normal) .x-btn-medium,
+.x-window .x-window-footer .x-toolbar-right-row .x-toolbar-cell:not(.x-hide-offsets) .x-btn.x-btn-over.x-btn-click:not(.zarafa-normal) .x-btn-large,
+
+.x-window .x-panel-footer .x-toolbar-left-row .x-toolbar-cell:not(.x-hide-offsets) .x-btn.x-btn-over:not(.zarafa-normal) .x-btn-small,
+.x-window .x-panel-footer .x-toolbar-left-row .x-toolbar-cell:not(.x-hide-offsets) .x-btn.x-btn-over:not(.zarafa-normal) .x-btn-medium,
+.x-window .x-panel-footer .x-toolbar-left-row .x-toolbar-cell:not(.x-hide-offsets) .x-btn.x-btn-over:not(.zarafa-normal) .x-btn-large,
+.x-window .x-panel-footer .x-toolbar-right-row .x-toolbar-cell:not(.x-hide-offsets) .x-btn.x-btn-over:not(.zarafa-normal) .x-btn-small,
+.x-window .x-panel-footer .x-toolbar-right-row .x-toolbar-cell:not(.x-hide-offsets) .x-btn.x-btn-over:not(.zarafa-normal) .x-btn-medium,
+.x-window .x-panel-footer .x-toolbar-right-row .x-toolbar-cell:not(.x-hide-offsets) .x-btn.x-btn-over:not(.zarafa-normal) .x-btn-large,
+.x-window .x-window-footer .x-toolbar-left-row .x-toolbar-cell:not(.x-hide-offsets) .x-btn.x-btn-over:not(.zarafa-normal) .x-btn-small,
+.x-window .x-window-footer .x-toolbar-left-row .x-toolbar-cell:not(.x-hide-offsets) .x-btn.x-btn-over:not(.zarafa-normal) .x-btn-medium,
+.x-window .x-window-footer .x-toolbar-left-row .x-toolbar-cell:not(.x-hide-offsets) .x-btn.x-btn-over:not(.zarafa-normal) .x-btn-large,
+.x-window .x-window-footer .x-toolbar-right-row .x-toolbar-cell:not(.x-hide-offsets) .x-btn.x-btn-over:not(.zarafa-normal) .x-btn-small,
+.x-window .x-window-footer .x-toolbar-right-row .x-toolbar-cell:not(.x-hide-offsets) .x-btn.x-btn-over:not(.zarafa-normal) .x-btn-medium,
+.x-window .x-window-footer .x-toolbar-right-row .x-toolbar-cell:not(.x-hide-offsets) .x-btn.x-btn-over:not(.zarafa-normal) .x-btn-large,
+*/
+.x-window .x-panel-footer .x-toolbar-left-row .x-toolbar-cell:not(.x-hide-offsets) .k-recipient-hover-card-button.x-btn.x-btn-over .x-btn-small,
+.x-window .x-panel-footer .x-toolbar-left-row .x-toolbar-cell:not(.x-hide-offsets) .k-recipient-hover-card-button.x-btn.x-btn-over .x-btn-medium,
+.x-window .x-panel-footer .x-toolbar-left-row .x-toolbar-cell:not(.x-hide-offsets) .k-recipient-hover-card-button.x-btn.x-btn-over .x-btn-large,
+.x-window .x-panel-footer .x-toolbar-right-row .x-toolbar-cell:not(.x-hide-offsets) .k-recipient-hover-card-button.x-btn.x-btn-over .x-btn-small,
+.x-window .x-panel-footer .x-toolbar-right-row .x-toolbar-cell:not(.x-hide-offsets) .k-recipient-hover-card-button.x-btn.x-btn-over .x-btn-medium,
+.x-window .x-panel-footer .x-toolbar-right-row .x-toolbar-cell:not(.x-hide-offsets) .k-recipient-hover-card-button.x-btn.x-btn-over .x-btn-large,
+.x-window .x-window-footer .x-toolbar-left-row .x-toolbar-cell:not(.x-hide-offsets) .k-recipient-hover-card-button.x-btn.x-btn-over .x-btn-small,
+.x-window .x-window-footer .x-toolbar-left-row .x-toolbar-cell:not(.x-hide-offsets) .k-recipient-hover-card-button.x-btn.x-btn-over .x-btn-medium,
+.x-window .x-window-footer .x-toolbar-left-row .x-toolbar-cell:not(.x-hide-offsets) .k-recipient-hover-card-button.x-btn.x-btn-over .x-btn-large,
+.x-window .x-window-footer .x-toolbar-right-row .x-toolbar-cell:not(.x-hide-offsets) .k-recipient-hover-card-button.x-btn.x-btn-over .x-btn-small,
+.x-window .x-window-footer .x-toolbar-right-row .x-toolbar-cell:not(.x-hide-offsets) .k-recipient-hover-card-button.x-btn.x-btn-over .x-btn-medium,
+.x-window .x-window-footer .x-toolbar-right-row .x-toolbar-cell:not(.x-hide-offsets) .k-recipient-hover-card-button.x-btn.x-btn-over .x-btn-large,
+
+.x-window .k-recipient-hover-card-button.x-btn.x-btn-over .x-btn-small,
+.k-category-filter .k-category-filter-label .x-btn-small:hover,								/* Search panel button */
+
+/*.x-btn.zarafa-action.x-btn-over .x-btn-small,*/
+.x-btn.zarafa-action.x-btn-over .x-btn-medium,
+.x-btn.zarafa-action.x-btn-over .x-btn-large,
+/*.x-btn-small:hover,*/
+.x-btn-medium:hover,
+.x-btn-large:hover,
+/*.x-btn-over .x-btn-small,*/
+.x-btn-over .x-btn-medium,
+.x-btn-over .x-btn-large {
+	border-color: #2587cb !important;
+	background-color: #1c2d3d !important;
+}
+
+/* Focused button border colour and background colour */
+.x-btn.x-btn-menu-active .x-btn-medium,
+.x-btn.x-btn-menu-active .x-btn-large {
+	border-color: #2587cb !important;
+	background-color: #1c2d3d !important;
+}
+
+/* Clicked button border colour and background colour */
+/*
+.x-window .x-panel-footer .x-toolbar-left-row .x-toolbar-cell:not(.x-hide-offsets) .x-btn.x-btn-click:not(.zarafa-normal) .x-btn-small,
+.x-window .x-panel-footer .x-toolbar-left-row .x-toolbar-cell:not(.x-hide-offsets) .x-btn.x-btn-click:not(.zarafa-normal) .x-btn-medium,
+.x-window .x-panel-footer .x-toolbar-left-row .x-toolbar-cell:not(.x-hide-offsets) .x-btn.x-btn-click:not(.zarafa-normal) .x-btn-large,
+.x-window .x-panel-footer .x-toolbar-right-row .x-toolbar-cell:not(.x-hide-offsets) .x-btn.x-btn-click:not(.zarafa-normal) .x-btn-small,
+.x-window .x-panel-footer .x-toolbar-right-row .x-toolbar-cell:not(.x-hide-offsets) .x-btn.x-btn-click:not(.zarafa-normal) .x-btn-medium,
+.x-window .x-panel-footer .x-toolbar-right-row .x-toolbar-cell:not(.x-hide-offsets) .x-btn.x-btn-click:not(.zarafa-normal) .x-btn-large,
+.x-window .x-window-footer .x-toolbar-left-row .x-toolbar-cell:not(.x-hide-offsets) .x-btn.x-btn-click:not(.zarafa-normal) .x-btn-small,
+.x-window .x-window-footer .x-toolbar-left-row .x-toolbar-cell:not(.x-hide-offsets) .x-btn.x-btn-click:not(.zarafa-normal) .x-btn-medium,
+.x-window .x-window-footer .x-toolbar-left-row .x-toolbar-cell:not(.x-hide-offsets) .x-btn.x-btn-click:not(.zarafa-normal) .x-btn-large,
+.x-window .x-window-footer .x-toolbar-right-row .x-toolbar-cell:not(.x-hide-offsets) .x-btn.x-btn-click:not(.zarafa-normal) .x-btn-small,
+.x-window .x-window-footer .x-toolbar-right-row .x-toolbar-cell:not(.x-hide-offsets) .x-btn.x-btn-click:not(.zarafa-normal) .x-btn-medium,
+.x-window .x-window-footer .x-toolbar-right-row .x-toolbar-cell:not(.x-hide-offsets) .x-btn.x-btn-click:not(.zarafa-normal) .x-btn-large,
+*/
+/*
+.x-btn.zarafa-action.x-btn-click .x-btn-small,
+.x-btn.zarafa-action.x-btn-click .x-btn-medium,
+.x-btn.zarafa-action.x-btn-click .x-btn-large,
+.x-btn.zarafa-action.x-btn-over.x-btn-click .x-btn-small,
+.x-btn.zarafa-action.x-btn-over.x-btn-click .x-btn-medium,
+.x-btn.zarafa-action.x-btn-over.x-btn-click .x-btn-large,
+.x-btn.x-btn-over.x-btn-click .x-btn-small,
+.x-btn.x-btn-over.x-btn-click .x-btn-medium,
+.x-btn.x-btn-over.x-btn-click .x-btn-large,
+*/
+.x-btn.x-btn-click .x-btn-medium,
+.x-btn.x-btn-click .x-btn-large {
+	border-color: #2587cb !important;
+	background-color: #1c2d3d !important;
+}
+
+/* Disabled button border colour and background colour */
+.x-btn.x-item-disabled .x-btn-small,
+.x-btn.x-item-disabled .x-btn-medium,
+.x-btn.x-item-disabled .x-btn-large {
+	border-color: transparent !important;
+	background-color: transparent !important;
+}
+
+/*----------------------------------------------------------------------------------------------------------------------
+Form controls - Date picker
+----------------------------------------------------------------------------------------------------------------------*/
+/* Date picker background colour and top/bottom border (line) */
+.x-date-picker,
+.x-date-picker .x-date-left,
+.x-date-picker .x-date-middle,
+.x-date-picker .x-date-right {
+	background-color: #282c37 !important;
+}
+.x-date-picker {
+	border-bottom-color: #084e80;
+}
+.x-date-picker .x-date-bottom {
+	border-top-color: #084e80;
+}
+
+/* Header with week days */
+.x-date-picker .x-date-inner th {
+	border-color: transparent !important;
+	background-color: #1c2d3d !important;
+	color: white !important;
+}
+
+/* Week numbers */
+.x-date-picker .x-date-weeknumber {
+	border-color: transparent !important;
+	background-color: #1c2d3d !important;
+}
+.x-date-picker .x-date-inner td.x-date-weeknumber a {
+	color: red !important;
+}
+
+/* Dates from previous month */
+.x-date-picker .x-date-prevday {
+	border-color: transparent !important;
+	background-color: #1c2d3d !important;
+}
+.x-date-picker .x-date-inner .x-date-prevday .x-date-date {
+	color: grey !important;
+}
+
+/* Dates from this month */
+.x-date-picker .x-date-active {
+	border-color: transparent !important;
+	background-color: #1c2d3d !important;
+}
+.x-date-picker .x-date-inner td:not(.x-date-weeknumber) a {
+	color: white !important;
+}
+
+/* Dates from next month */
+.x-date-picker .x-date-nextday {
+	border-color: transparent !important;
+	background-color: #1c2d3d !important;
+}
+.x-date-picker .x-date-inner .x-date-nextday .x-date-date {
+	color: grey !important;
+}
+
+/* Dates hovered */
+.x-date-picker .x-date-inner td.x-date-prevday a:hover,
+.x-date-picker .x-date-inner td.x-date-active a:hover,
+.x-date-picker .x-date-inner td.x-date-nextday a:hover {
+	border-color: transparent !important;
+	background-color: #2587cb !important;
+}
+
+/* Normal today */
+/*.x-date-picker .x-date-active.x-date-today,*/
+.x-date-picker .x-date-inner td.x-date-today a {
+	border-color: transparent !important;
+	background-color: #506a7c !important;
+}
+
+/* Hovered today */
+.x-date-picker .x-date-inner td.x-date-today a:hover {
+	border-color: transparent !important;
+	background-color: #2587cb !important;
+}
+
+/* Normal selected day */
+/*.x-date-picker .x-date-active.x-date-selected,*/
+.x-date-picker .x-date-inner td.x-date-selected:not(.x-date-today) a {
+	border-color: transparent !important;
+	background-color: #506a7c !important;
+}
+.x-date-picker .x-date-inner .x-date-today .x-date-date {
+	color: gold !important;
+}
+
+/* Hovered selected day */
+.x-date-picker .x-date-inner td.x-date-selected:not(.x-date-today) a:hover {
+	border-color: transparent !important;
+	background-color: #2587cb !important;
+}
+
+
+
+
+

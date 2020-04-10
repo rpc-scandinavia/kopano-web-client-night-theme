@@ -1,0 +1,8 @@
+{
+	"display-name":		"Night blue",
+	"primary-color":	"#37651c",
+	"action-color":		"#b7cb2d",
+	"logo-large":		"img/itdd-logo.svg",
+	"background-image":	"img/background.jpg",
+	"stylesheets":		["css/theme-night-blue.css"]
+}

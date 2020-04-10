@@ -1,0 +1,6 @@
+{
+	"display-name":		"Night green",
+	"logo-large":		"img/itdd-logo.svg",
+	"background-image":	"img/background.jpg",
+	"stylesheets":		["css/theme-night-green.css"]
+}
