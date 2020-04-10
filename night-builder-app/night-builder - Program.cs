@@ -113,7 +113,7 @@ namespace RpcScandinavia.Tool {
 			// Theme: Save the theme CSS.
 			File.WriteAllText(resultThemeFileName, css);
 
-			// Breeze: Load the templatte CSS.
+			// Breeze: Load the template CSS.
 			css = File.ReadAllText(templateBreezeFileName);
 
 			// Breeze: Replace the fill colours in the SVG images contained in the CSS.
@@ -122,7 +122,7 @@ namespace RpcScandinavia.Tool {
 			// Breeze: Save the theme CSS.
 			File.WriteAllText(resultBreezeFileName, css);
 
-			// Classic: Load the templatte CSS.
+			// Classic: Load the template CSS.
 			css = File.ReadAllText(templateClassicFileName);
 
 			// Classic: Replace the fill colours in the SVG images contained in the CSS.

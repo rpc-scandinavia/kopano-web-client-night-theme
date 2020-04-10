@@ -4,6 +4,61 @@ The build in "dark" theme, is actually a light theme with black text.
 I started creating my own dark theme, but since the name "dark" is already used wrongfully, I named this theme "night".
 
 
+## Installation
+
+1) Download and extract the ZIP file
+2) Copy the content from "iconsets" to "/usr/share/kopano-webapp/client/resources/iconsets"
+3) Copy the content from "plugins" to "/usr/share/kopano-webapp/plugins"
+4) Set security on copied files
+
+```bash
+chown  www-data:www-data  --recursive  "/usr/share/kopano-webapp/client/resources/iconsets"
+chown  www-data:www-data  --recursive  "/usr/share/kopano-webapp/plugins"
+```
+
+## Development
+In my case, I have access to the same disk from both the Kopano mail server and my workstation. So I use sumbolic links on the Kopano web server, to awoid copying the modified all the time.
+
+1) Download and extract the ZIP file
+2) Modifi "SETUP_NIGHT_THEMES_DIRECTORY" and the "SETUP_NIGHT_ICONS_DIRECTORY" in the "night-links.sh" script
+3) Review the "night-links.sh" script
+4) Execute the "night-links.sh" script on the Kopano mail server
+
+### Small changes in CSS (fixing bugs)
+You need to build the themes after making changes in the "night-template.css" template CSS file.
+
+1) Execute the "night-builder" application with two arguments (example where original ZIP is extracted to "~/kopano-web-client-night-theme")
+
+```bash
+cd  "~/kopano-web-client-night-theme"
+night-builder  SETUP_NIGHT_ICONS_DIRECTORY="~/kopano-web-client-night-theme/iconsets"  SETUP_NIGHT_THEMES_DIRECTORY="~/kopano-web-client-night-theme/plugins"
+```
+
+### Colour changes
+You need to modifi and compile the "night-builder" application, when you wish to introduce new colours or change existing colours.
+
+1) Install Microsoft .NET 5 from "https://dotnet.microsoft.com/download"
+2) Make changes to CSS and/or CS files
+3) Build and execute the "night-builder" application (example where original ZIP is extracted to "~/kopano-web-client-night-theme")
+
+```bash
+cd  "~/kopano-web-client-night-theme/night-builder-app"
+dotnet  run  SETUP_NIGHT_ICONS_DIRECTORY="~/kopano-web-client-night-theme/iconsets"  SETUP_NIGHT_THEMES_DIRECTORY="~/kopano-web-client-night-theme/plugins"
+```
+
+4) Build the self contained "night-builder" application (example where original ZIP is extracted to "~/kopano-web-client-night-theme")
+
+```bash
+cd  "~/kopano-web-client-night-theme/night-builder-app"
+dotnet  publish  /p:PublishSingleFile=true  /p:DebugType=None  --self-contained true  --configuration release  --runtime "linux-x64"  --output "../"
+```
+
+TIP: You can change the default "SETUP_NIGHT_THEMES_DIRECTORY" and "SETUP_NIGHT_ICONS_DIRECTORY" variables in "night-builder - Program.cs".
+TIP: You only need to make changes in "night-builder - Themes.cs", when changing existing theme colours.
+
+
+# Development log
+
 ## 2020-04-10
 Replaced the "night-builder.sh" script and the "Fix-Svg" app with one new C# app (night-builder), that contains the theme colours, and the ability to update multiple "fill" colours in the SVG images.
 The colour themes and SVG fill colour map is located in "night-builder - Themes.cs".
