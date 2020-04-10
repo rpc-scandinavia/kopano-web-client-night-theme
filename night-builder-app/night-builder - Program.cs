@@ -107,7 +107,7 @@ namespace RpcScandinavia.Tool {
 			// Theme: Trim the beginning lines from the CSS.
 			css = this.TrimStart(css);
 
-			// Template: Replace the fill colours in the SVG images contained in the CSS.
+			// Theme: Replace the fill colours in the SVG images contained in the CSS.
 			css = this.ReplaceFillColors(css, map);
 
 			// Theme: Save the theme CSS.
