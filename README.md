@@ -6,11 +6,14 @@ I started creating my own dark theme, but since the name "dark" is already used 
 
 ## Todo
 
-* Identify multicolour icon images
-* Make the next level (as I call it), which is the "windows" and the "dialogs" in the Kopano Web application
-* Tinker with the theme colours
-* New night themes (yellow, red etc.)
-* Bug fixes
+- [x] Make the first level
+- [x] Write the "night-builder" application
+- [x] Test first level with two night themes (night-blue and night-green)
+- [ ] Identify multicolour icon images
+- [ ] Make the next level (as I call it), which is the "windows" and the "dialogs" in the Kopano Web application
+- [ ] Tinker with the theme colours
+- [ ] New night themes (yellow, red etc.)
+- [ ] Bug fixes
 
 
 ## Installation
