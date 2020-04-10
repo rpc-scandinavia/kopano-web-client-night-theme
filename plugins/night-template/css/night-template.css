@@ -576,7 +576,6 @@ Main panel
 /* Main panel, toolbar */
 /* This also "hides" the resize lines */
 #zarafa-mainpanel .x-toolbar,
-#zarafa-mainpanel .x-grid3-header,
 #zarafa-mainpanel .x-grid3-cell {
 	border-left-color: transparent !important;
 	border-right-color: transparent !important;
@@ -584,6 +583,7 @@ Main panel
 }
 
 /* Main panel, header */
+#zarafa-mainpanel .x-grid3-hd-row td,
 #zarafa-mainpanel .x-grid3-header {
 	border-left-color: transparent !important;
 	border-right-color: transparent !important;
@@ -640,7 +640,8 @@ Main panel, tabs
 }
 
 /* Main panel, hovered tab */
-#zarafa-mainpanel .x-tab-strip-over .x-tab-right {
+#zarafa-mainpanel .x-tab-strip-over .x-tab-right,
+#zarafa-mainpanel .x-tab-strip-active.x-tab-strip-over .x-tab-right {
 	background-color: #2587c7 !important;
 }
 #zarafa-mainpanel .x-tab-strip-over {
@@ -648,7 +649,8 @@ Main panel, tabs
 	border-top-color: #111122 !important;
 	border-right-color: #111122 !important;
 }
-#zarafa-mainpanel .x-tab-strip-over .x-tab-strip-text {
+#zarafa-mainpanel .x-tab-strip-over .x-tab-strip-text,
+#zarafa-mainpanel .x-tab-strip-active.x-tab-strip-over .x-tab-strip-text {
 	color: #f0f0fa;
 }
 
@@ -690,6 +692,7 @@ Main panel, content (lists etc.)
 ----------------------------------------------------------------------------------------------------------------------*/
 /* Main panel content, group header */
 #zarafa-mainpanel, .x-grid-group-hd {
+	width: auto !important;
 	background-color: #364461 !important;
 }
 #zarafa-mainpanel .x-grid-group-hd div.x-grid-group-title {
@@ -698,6 +701,7 @@ Main panel, content (lists etc.)
 
 /* Main panel content, normal list item */
 #zarafa-mainpanel .x-grid3-row {
+	width: auto !important;
 	border-color: #102138 !important;
 	border-top-color: #084e80 !important;
 	border-bottom-color: #084e80 !important;
@@ -723,6 +727,7 @@ Main panel, content (lists etc.)
 /* Main panel content, hovered list item */
 #zarafa-mainpanel .x-grid3-row.x-grid3-row-over,
 #zarafa-mainpanel .x-grid3-row.x-grid3-row-selected.x-grid3-row-over {
+	width: auto !important;
 	border-color: #2587c8 !important;
 	border-top-color: #084e82 !important;
 	border-bottom-color: #084e82 !important;
@@ -731,6 +736,7 @@ Main panel, content (lists etc.)
 
 /* Main panel content, selected list */
 #zarafa-mainpanel .x-grid3-row.x-grid3-row-selected {
+	width: auto !important;
 	border-color: #506a76;
 	border-top-color: #084e83;
 	border-bottom-color: #084e83;
@@ -1881,7 +1887,6 @@ Panels, dialogs and windows
 }
 
 /* Panel header */
-.x-grid3-header,
 .x-grid3-hd-row td,
 .x-window .x-window-tl,
 .x-window-header,
@@ -2065,6 +2070,17 @@ Including the navigation panel tree
 .x-tree-node .x-tree-node-leaf.x-tree-selected {
 	background-color: #506a74 !important;
 	color: #fffefc !important;
+}
+
+
+
+
+/*----------------------------------------------------------------------------------------------------------------------
+PNG images
+----------------------------------------------------------------------------------------------------------------------*/
+.icon_mdm_settings {
+	/* Rotate from #3e3e3f to blue #006699 approximately */
+	filter: brightness(90%) sepia(100) saturate(100) hue-rotate(190deg);
 }
 
 
