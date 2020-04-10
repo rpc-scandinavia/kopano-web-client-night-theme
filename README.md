@@ -137,16 +137,10 @@ The CSS code need to be cleaned up, and unnecessary code removed.
 
 ## A few screenshots
 
-![Today (red icons)](screenshots/2020-04-06%20Today%20%28red%20icons%29.png?raw=true "Today %28red%20icons%29")
+![Mail Blue](screenshots/2020-04-10%20Mail%20Blue.png?raw=true "Mail%20Blue")
 
-![Mail (blue)](screenshots/2020-04-01%20Mail%20%28blue%29.png?raw=true "Mail %28blue%29")
+![Mail Green](screenshots/2020-04-10%20Mail%20Green.png?raw=true "Mail%20Green")
 
-![Mail (green)](screenshots/2020-04-01%20Mail%20%28green%29.png?raw=true "Mail %28green%29")
+![New Mail Blue](screenshots/2020-04-10%20New%20Mail%20Blue.png?raw=true "New%20Mail%20Blue")
 
-![Mail](screenshots/2020-03-24%20Mail.png?raw=true "Mail")
-
-![Calendar](screenshots/2020-03-24%20Calendar.png?raw=true "Calendar")
-
-![New mail](screenshots/2020-03-24%20New%20mail.png?raw=true "New mail")
-
-![Notes](screenshots/2020-03-24%20Notes%20icons.png?raw=true "Notes")
+![Settings Blue](screenshots/2020-04-10%20Settings%20Blue.png?raw=true "Settings%20Blue")
