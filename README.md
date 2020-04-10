@@ -9,7 +9,7 @@ I started creating my own dark theme, but since the name "dark" is already used 
 - [x] Make the first level
 - [x] Write the "night-builder" application
 - [x] Test first level with two night themes (night-blue and night-green)
-- [ ] Identify multicolour icon images
+- [ ] Identify multi-colour icon images
 - [ ] Make the next level (as I call it), which is the "windows" and the "dialogs" in the Kopano Web application
 - [ ] Tinker with the theme colours
 - [ ] New night themes (yellow, red etc.)
@@ -29,7 +29,7 @@ chown  www-data:www-data  --recursive  "/usr/share/kopano-webapp/plugins"
 ```
 
 ## Development
-In my case, I have access to the same disk from both the Kopano mail server and my workstation. So I use sumbolic links on the Kopano web server, to awoid copying the modified files all the time.
+In my case, I have access to the same disk from both the Kopano mail server and my workstation. So I use sumbolic links on the Kopano web server, to avoid copying the modified files all the time.
 
 1) Download and extract the ZIP file
 2) Modifi the "SETUP_NIGHT_THEMES_DIRECTORY" and the "SETUP_NIGHT_ICONS_DIRECTORY" variables in the "night-links.sh" script
