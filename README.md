@@ -32,7 +32,7 @@ chown  www-data:www-data  --recursive  "/usr/share/kopano-webapp/plugins"
 In my case, I have access to the same disk from both the Kopano mail server and my workstation. So I use sumbolic links on the Kopano web server, to avoid copying the modified files all the time.
 
 1) Download and extract the ZIP file
-2) Modifi the "SETUP_NIGHT_THEMES_DIRECTORY" and the "SETUP_NIGHT_ICONS_DIRECTORY" variables in the "night-links.sh" script
+2) Modifi the "SETUP_NIGHT_ICONS_DIRECTORY" and the "SETUP_NIGHT_THEMES_DIRECTORY" variables in the "night-links.sh" script
 3) Review the "night-links.sh" script
 4) Execute the "night-links.sh" script on the Kopano mail server
 
