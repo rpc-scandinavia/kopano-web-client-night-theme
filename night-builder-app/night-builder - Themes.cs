@@ -56,6 +56,8 @@ namespace RpcScandinavia.Tool {
 			Themes.NightBlue.Line = "#004080";
 			Themes.NightBlue.Border = "#004080";
 			Themes.NightBlue.Icon = "#006699";
+			Themes.NightBlue.Icon2 = "#b3b300";
+			Themes.NightBlue.IconBright = "#99ddff";
 			Themes.NightBlue.Text9 = "#f0f0f0";
 			Themes.NightBlue.Text6 = "#b4b4e0";
 			Themes.NightBlue.Text5 = "#808080";
@@ -63,14 +65,29 @@ namespace RpcScandinavia.Tool {
 			Themes.NightBlue.TextYellow = "#ffff00";
 			Themes.NightBlue.TextGold = "#ffd700";
 			Themes.NightBlue.Transparent = "unset";
+			Themes.NightBlue.IconMdmSettings = 195;
 
 			Themes.MapBlue = new SvgMap(Themes.NightBlue.Icon);
-			Themes.MapBlue.AddEntry(".icon_indicator_calendar", Themes.NightBlue.TextRed);
-			Themes.MapBlue.AddEntry(".icon_note_blue_large", "#19b5f1", "#ffffff");
-			Themes.MapBlue.AddEntry(".icon_note_green_large", "#81cc2b", "#ffffff");
-			Themes.MapBlue.AddEntry(".icon_note_pink_large", "#9c1662", "#ffffff");
-			Themes.MapBlue.AddEntry(".icon_note_white_large", "#cac8c8", "#6d6d70");
-			Themes.MapBlue.AddEntry(".icon_note_yellow_large", "#fcc907", "#ffffff");
+			Themes.MapBlue.AddEntry(".icon_settings", Themes.NightBlue.IconBright);
+			Themes.MapBlue.AddEntry(".icon_logout", Themes.NightBlue.IconBright);
+			Themes.MapBlue.AddEntry(".icon_cross", Themes.NightBlue.IconBright);
+			Themes.MapBlue.AddEntry(".icon_folder_default_inbox", Themes.NightBlue.Icon2, Themes.NightBlue.Icon);
+			Themes.MapBlue.AddEntry(".icon_folder_default_drafts", Themes.NightBlue.Icon2, Themes.NightBlue.Icon);
+			Themes.MapBlue.AddEntry(".icon_folder_default_outbox", Themes.NightBlue.Icon2, Themes.NightBlue.Icon);
+			Themes.MapBlue.AddEntry(".icon_folder_default_sent", Themes.NightBlue.Icon2, Themes.NightBlue.Icon);
+			Themes.MapBlue.AddEntry(".icon_folder_contact", Themes.NightBlue.Icon2, Themes.NightBlue.Icon);
+			Themes.MapBlue.AddEntry(".icon_folder_task", Themes.NightBlue.Icon2, Themes.NightBlue.Icon);
+			Themes.MapBlue.AddEntry(".icon_folder_default_journal", Themes.NightBlue.Icon2, Themes.NightBlue.Icon);
+			Themes.MapBlue.AddEntry(".icon_folder_rss", Themes.NightBlue.Icon2, Themes.NightBlue.Icon);
+			Themes.MapBlue.AddEntry(".icon_contact_card", Themes.NightBlue.Icon, Themes.NightBlue.Icon2);
+			Themes.MapBlue.AddEntry(".icon_checked", Themes.NightBlue.Icon2, Themes.NightBlue.Icon);
+			Themes.MapBlue.AddEntry(".icon_task_complete", Themes.NightBlue.Icon2, Themes.NightBlue.Icon);
+			Themes.MapBlue.AddEntry(".icon_indicator_calendar", Themes.NightBlue.TextGold);
+			Themes.MapBlue.AddEntry(".icon_note_blue_large", Themes.NightBlue.Icon2, "#19b5f1");
+			Themes.MapBlue.AddEntry(".icon_note_green_large", Themes.NightBlue.Icon2, "#81cc2b");
+			Themes.MapBlue.AddEntry(".icon_note_pink_large", Themes.NightBlue.Icon2, "#9c1662");
+			Themes.MapBlue.AddEntry(".icon_note_white_large", "#6d6d70", "#cac8c8");
+			Themes.MapBlue.AddEntry(".icon_note_yellow_large", Themes.NightBlue.Icon2, "#fcc907");
 		} // InitializeNightBlue
 		#endregion
 
@@ -106,6 +123,8 @@ namespace RpcScandinavia.Tool {
 			Themes.NightGreen.Line ="#145214";
 			Themes.NightGreen.Border ="#145214";
 			Themes.NightGreen.Icon ="#1f7a1f";
+			Themes.NightGreen.Icon2 = "white";
+			Themes.NightGreen.IconBright ="#adebad";
 			Themes.NightGreen.Text9 ="#f0f0f0";
 			Themes.NightGreen.Text6 ="#b4b4e0";
 			Themes.NightGreen.Text5 ="#808080";
@@ -113,14 +132,29 @@ namespace RpcScandinavia.Tool {
 			Themes.NightGreen.TextYellow ="#ffff00";
 			Themes.NightGreen.TextGold ="#ffd700";
 			Themes.NightGreen.Transparent ="transparent";
+			Themes.NightGreen.IconMdmSettings = 140;
 
 			Themes.MapGreen = new SvgMap(Themes.NightGreen.Icon);
-			Themes.MapGreen.AddEntry(".icon_indicator_calendar", Themes.NightGreen.TextRed);
-			Themes.MapGreen.AddEntry(".icon_note_blue_large", "#19b5f1", "#ffffff");
-			Themes.MapGreen.AddEntry(".icon_note_green_large", "#81cc2b", "#ffffff");
-			Themes.MapGreen.AddEntry(".icon_note_pink_large", "#9c1662", "#ffffff");
-			Themes.MapGreen.AddEntry(".icon_note_white_large", "#cac8c8", "#6d6d70");
-			Themes.MapGreen.AddEntry(".icon_note_yellow_large", "#fcc907", "#ffffff");
+			Themes.MapGreen.AddEntry(".icon_settings", Themes.NightGreen.IconBright);
+			Themes.MapGreen.AddEntry(".icon_logout", Themes.NightGreen.IconBright);
+			Themes.MapGreen.AddEntry(".icon_cross", Themes.NightGreen.IconBright);
+			Themes.MapGreen.AddEntry(".icon_folder_default_inbox", Themes.NightGreen.Icon2, Themes.NightGreen.Icon);
+			Themes.MapGreen.AddEntry(".icon_folder_default_drafts", Themes.NightGreen.Icon2, Themes.NightGreen.Icon);
+			Themes.MapGreen.AddEntry(".icon_folder_default_outbox", Themes.NightGreen.Icon2, Themes.NightGreen.Icon);
+			Themes.MapGreen.AddEntry(".icon_folder_default_sent", Themes.NightGreen.Icon2, Themes.NightGreen.Icon);
+			Themes.MapGreen.AddEntry(".icon_folder_contact", Themes.NightGreen.Icon2, Themes.NightGreen.Icon);
+			Themes.MapGreen.AddEntry(".icon_folder_task", Themes.NightGreen.Icon2, Themes.NightGreen.Icon);
+			Themes.MapGreen.AddEntry(".icon_folder_default_journal", Themes.NightGreen.Icon2, Themes.NightGreen.Icon);
+			Themes.MapGreen.AddEntry(".icon_folder_rss", Themes.NightGreen.Icon2, Themes.NightGreen.Icon);
+			Themes.MapGreen.AddEntry(".icon_contact_card", Themes.NightGreen.Icon2, Themes.NightGreen.Icon);
+			Themes.MapGreen.AddEntry(".icon_checked", Themes.NightGreen.Icon2, Themes.NightGreen.Icon);
+			Themes.MapGreen.AddEntry(".icon_task_complete", Themes.NightGreen.Icon2, Themes.NightGreen.Icon);
+			Themes.MapGreen.AddEntry(".icon_indicator_calendar", Themes.NightGreen.TextGold);
+			Themes.MapGreen.AddEntry(".icon_note_blue_large", Themes.NightGreen.Icon2, "#19b5f1");
+			Themes.MapGreen.AddEntry(".icon_note_green_large", Themes.NightGreen.Icon2, "#81cc2b");
+			Themes.MapGreen.AddEntry(".icon_note_pink_large", Themes.NightGreen.Icon2, "#9c1662");
+			Themes.MapGreen.AddEntry(".icon_note_white_large", "#6d6d70", "#cac8c8");
+			Themes.MapGreen.AddEntry(".icon_note_yellow_large", Themes.NightGreen.Icon2, "#fcc907");
 		} // InitializeNightGreen
 		#endregion
 

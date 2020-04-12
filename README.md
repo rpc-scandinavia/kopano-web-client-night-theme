@@ -9,8 +9,8 @@ I started creating my own dark theme, but since the name "dark" is already used 
 - [x] Make the first level
 - [x] Write the "night-builder" application
 - [x] Test first level with two night themes (night-blue and night-green)
-- [ ] Identify multi-colour icon images
-- [ ] Make the next level (as I call it), which is the "windows" and the "dialogs" in the Kopano Web application
+- [x] Identify multi-colour icon images
+- [ ] Make the next level (as I call it), which is the "windows" and the "dialogs" in the Kopano Web application (only missing some buttons)
 - [ ] Tinker with the theme colours
 - [ ] New night themes (yellow, red etc.)
 - [ ] Bug fixes
@@ -73,6 +73,13 @@ dotnet  publish  /p:PublishSingleFile=true  /p:DebugType=None  --self-contained 
 
 # Development log
 
+
+## 2020-04-12
+The project has reached the stage that I would call beta, because it is useable.
+I identified the multi colour icons, fixed a small bug in "night-builder" so it iterates all "path" elements, and modifies the "fill" colour.
+I made almost everything at the next level, except some buttons.
+
+
 ## 2020-04-10
 Replaced the "night-builder.sh" script and the "Fix-Svg" app with one new C# app (night-builder), that contains the theme colours, and the ability to update multiple "fill" colours in the SVG images.
 The colour themes and SVG fill colour map is located in "night-builder - Themes.cs".
@@ -82,7 +89,6 @@ Now I am happy :-) , and so far I have tested with a few multi-colour images for
 I also changed it, so there are two icon sets for each night theme, so it is possible to colour the icons.
 
 Next is identifying remaining two colour icons and fixing the next level (as I call it), which is the "windows" and "dialogs", plus bug fixes.
-
 
 
 ## 2020-04-06

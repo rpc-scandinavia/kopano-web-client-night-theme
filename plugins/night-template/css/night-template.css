@@ -194,7 +194,7 @@
 	color: #102147;				/* Day/week view content background colour */
 	color: #f6ffff;				/* Day/Week view time devider line colour */
 	color: #f4ffff;				/* Day/week view time text colour */
-	color: #ff0000;				/* Day/week view current time line */
+	color: #fe0000;				/* Day/week view current time line */
 	color: #506a86;				/* Current day background and border colour */
 	color: #084e94;				/* Calendar appointment border colour */
 	color: #fffdff;				/* Calendar appointment text colour */
@@ -1230,7 +1230,7 @@ Calendar content
 /* Calendar day/week view, current time line */
 /* This should be red, because it has a red clock from svg image */
 .k-calendar-timestrip-indicator-line {
-	background-color: #ff0000;
+	background-color: #fe0000;
 }
 
 /* Calendar current day */
@@ -1412,6 +1412,12 @@ div.zarafa-contact-cardview-selected {
 }
 #contact-cardview .zarafa-contact-cardview-selected .contact-card-label {
 	color: #808088 !important;
+}
+
+/* Contact photo border */
+.zarafa-contactcreatepanel .zarafa-contactgeneraltab .contact_photo_box_ct {
+	border-color:  #364466;
+	box-shadow: inset 0px 0px 0px 3px #364466;
 }
 
 
@@ -1880,6 +1886,12 @@ textarea.x-form-field:focus {
 /*----------------------------------------------------------------------------------------------------------------------
 Panels, dialogs and windows
 ----------------------------------------------------------------------------------------------------------------------*/
+/* Minimum height of "dialog" content */
+.x-window-mr,
+.x-window-body {
+	min-height: 80px;
+}
+
 /* Panel border */
 .x-fieldset,
 .x-panel .x-panel-body {
@@ -2080,7 +2092,10 @@ PNG images
 ----------------------------------------------------------------------------------------------------------------------*/
 .icon_mdm_settings {
 	/* Rotate from #3e3e3f to blue #006699 approximately */
-	filter: brightness(90%) sepia(100) saturate(100) hue-rotate(190deg);
+	filter: brightness(90%) sepia(100) saturate(100) hue-rotate(100deg);
+}
+.default_contact_photo {
+	filter: brightness(50%);
 }
 
 

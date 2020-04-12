@@ -303,7 +303,7 @@ namespace RpcScandinavia.Tool {
 			css = css.Replace("#102147", theme.Back1);									// Day/week view content background colour
 			css = css.Replace("#f6ffff", theme.Text9);									// Day/Week view time devider line colour
 			css = css.Replace("#f4ffff", theme.Text9);									// Day/week view time text colour
-			css = css.Replace("#ff0000", theme.TextRed);								// Day/week view current time line
+			css = css.Replace("#fe0000", theme.TextGold);								// Day/week view current time line
 			css = css.Replace("#506a86", theme.BackSelected);							// Current day background and border colour
 			css = css.Replace("#084e94", theme.Text5);									// Calendar appointment border colour */
 			css = css.Replace("#fffdff", theme.Text9);									// Calendar appointment text colour */
@@ -432,6 +432,10 @@ namespace RpcScandinavia.Tool {
 			css = css.Replace("#506a74", theme.BackSelected);							// Selected leaf tree node background colour
 			css = css.Replace("#fffefc", theme.Text9);									// Selected tree node background colour
 
+			// Re-colouring PNG images
+			// filter: brightness(90%) sepia(100) saturate(100) hue-rotate(100deg);
+			css = css.Replace("100deg", theme.IconMdmSettings + "deg");					// .icon_mdm_settings
+
 			// Return the CSS.
 			return css;
 		} // SearchAndReplace
@@ -476,15 +480,10 @@ namespace RpcScandinavia.Tool {
 						if (cssIds.Length > 0) {
 							cssId = cssIds[0].Trim().ToLower();
 						}
-//Console.WriteLine($"--------------------------------------------------------------------------------");
-//Console.WriteLine($"{cssId}");
-//Console.WriteLine($"{cssLine}");
-//Console.WriteLine($"--------------------------------------------------------------------------------");
+
 						// Decode the BASE64 data.
 						String base64 = cssLine.Substring(base64Start + 27, base64End - base64Start - 27);
 						String svg = Encoding.UTF8.GetString(Convert.FromBase64String(base64));
-//Console.WriteLine($"{svg}");
-//Console.WriteLine($"--------------------------------------------------------------------------------");
 
 						// Get the XML.
 						//XmlNameTable xmlNameTable = new NameTable();
@@ -495,13 +494,17 @@ namespace RpcScandinavia.Tool {
 						xml.LoadXml(svg);
 
 						// Iterate through all "path" elements.
-						XmlElement xmlElement = xml.DocumentElement;
-						Int32 xmlIndex = 0;
 						//foreach (XmlNode xmlNode in xml.SelectNodes("//path")) {					this does not work
-						foreach (XmlNode xmlNode in xmlElement.ChildNodes) {
+						Int32 xmlIndex = 0;
+						Stack<XmlNode> xmlElements = new Stack<XmlNode>();
+						xmlElements.Push(xml.DocumentElement);
+						while (xmlElements.Count > 0) {
+							XmlNode xmlNode = xmlElements.Pop();
+							foreach (XmlNode xmlChildNode in xmlNode.ChildNodes) {
+								xmlElements.Push(xmlChildNode);
+							}
+
 							if (xmlNode.Name.ToLower() == "path") {
-//Console.WriteLine($"{xmlNode.OuterXml}");
-//Console.WriteLine($"--------------------------------------------------------------------------------");
 								// Get the "style" attribute, or create a new if it does not exist.
 								XmlNode styleNode = xmlNode.Attributes.GetNamedItem("style");
 								if (styleNode == null) {
@@ -522,7 +525,6 @@ namespace RpcScandinavia.Tool {
 									// Add the mapped "fill" colour.
 									if ((map.Entries.ContainsKey(cssId) == true) && (map.Entries[cssId].Count > xmlIndex)) {
 										// Use the mapped colour.
-//Console.WriteLine($"{cssId}: {map.Entries[cssId][xmlIndex]}");
 										styles.Add($"fill:{map.Entries[cssId][xmlIndex]}");
 									} else {
 										// Use the default colour.
@@ -614,6 +616,8 @@ namespace RpcScandinavia.Tool {
 		public String Line { get; set; }
 		public String Border { get; set; }
 		public String Icon { get; set; }
+		public String Icon2 { get; set; }
+		public String IconBright { get; set; }
 		public String Text9 { get; set; }
 		public String Text6 { get; set; }
 		public String Text5 { get; set; }
@@ -621,6 +625,7 @@ namespace RpcScandinavia.Tool {
 		public String TextYellow { get; set; }
 		public String TextGold { get; set; }
 		public String Transparent { get; set; }
+		public Int32 IconMdmSettings { get; set; } = 0;
 	} // Theme
 	#endregion
 
