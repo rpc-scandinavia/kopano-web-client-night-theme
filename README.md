@@ -1,3 +1,6 @@
+This project is retired.
+I switched to DoveCot, Radicale and RoundCube in 2024, and are not using the Kopano mail client any more.
+
 # Kopano web application - Night theme
 The build in "dark" theme, is actually a light theme with black text.
 
